@@ -36,6 +36,11 @@ gem 'bootstrap-sass'
 ### Static pages ###
 gem 'high_voltage'
 
+### Active Admin ###
+gem 'activeadmin', github: 'gregbell/active_admin'
+
+### User Auhtentification ###
+gem 'devise'
 
 
 # Use ActiveModel has_secure_password
