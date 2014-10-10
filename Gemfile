@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby "2.1.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use postgresql as the database for Active Record
@@ -42,6 +42,11 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 ### User Auhtentification ###
 gem 'devise'
 
+### Form Simplified ###
+gem 'simple_form'
+
+### Display better errors ###
+gem "better_errors"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
