@@ -33,7 +33,8 @@ gem 'spring',        group: :development
 ### Boostrap ###
 gem 'bootstrap-sass'
 
-
+### Static pages ###
+gem 'high_voltage'
 
 
 
