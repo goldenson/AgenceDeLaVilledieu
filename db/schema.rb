@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141010050245) do
+ActiveRecord::Schema.define(version: 20141021042140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,5 +48,36 @@ ActiveRecord::Schema.define(version: 20141010050245) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "houses", force: true do |t|
+    t.integer  "type_id"
+    t.string   "name"
+    t.string   "address"
+    t.decimal  "area"
+    t.decimal  "mainarea"
+    t.integer  "piece"
+    t.integer  "room"
+    t.integer  "bathroom"
+    t.integer  "toilette"
+    t.decimal  "price"
+    t.decimal  "energy"
+    t.decimal  "impact"
+    t.decimal  "tax"
+    t.string   "heating"
+    t.integer  "construction"
+    t.integer  "outdoorarea"
+    t.integer  "floor"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "houses", ["type_id"], name: "index_houses_on_type_id", using: :btree
+
+  create_table "types", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

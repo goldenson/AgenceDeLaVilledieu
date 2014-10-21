@@ -39,7 +39,7 @@ gem 'high_voltage'
 ### Active Admin ###
 gem 'activeadmin', github: 'gregbell/active_admin'
 
-### User Auhtentification ###
+	### User Auhtentification ###
 gem 'devise'
 
 ### Form Simplified ###
@@ -47,6 +47,15 @@ gem 'simple_form'
 
 ### Display better errors ###
 gem "better_errors"
+
+### Handle image on cloudinary ###
+#gem 'paperclip', github: 'thoughtbot/paperclip'
+
+### Handle S3 ###
+#gem 'aws-sdk'
+
+### Annotate for model ###
+#gem 'annotate', github: 'ctran/annotate_models'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
