@@ -31,3 +31,5 @@ config/secrets.yml
 bower.json
 /vendor
 /test
+/public/system
+*.csv
