@@ -49,7 +49,7 @@ gem 'simple_form'
 gem "better_errors"
 
 ### Handle image on cloudinary ###
-#gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'paperclip', github: 'thoughtbot/paperclip'
 
 ### Handle S3 ###
 #gem 'aws-sdk'
