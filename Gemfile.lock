@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: git://github.com/thoughtbot/paperclip.git
-  revision: 3ec2599d13c1c4d6ab7c5bd291b8ff31e625915e
+  revision: 17cae0e7956e4c78891875ede83f1c4f173bc9ce
   specs:
     paperclip (4.2.0)
       activemodel (>= 3.0.0)
@@ -67,6 +67,8 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
     bourbon (3.2.3)
@@ -85,6 +87,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    debug_inspector (0.0.2)
     devise (3.4.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -205,6 +208,7 @@ DEPENDENCIES
   activeadmin!
   aws-sdk
   better_errors
+  binding_of_caller
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   devise

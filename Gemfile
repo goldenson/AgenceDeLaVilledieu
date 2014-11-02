@@ -47,6 +47,7 @@ gem 'simple_form'
 
 ### Display better errors ###
 gem "better_errors"
+gem 'binding_of_caller'
 
 ### Handle image on cloudinary ###
 gem 'paperclip', github: 'thoughtbot/paperclip'
