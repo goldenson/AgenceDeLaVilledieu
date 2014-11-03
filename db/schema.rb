@@ -70,10 +70,6 @@ ActiveRecord::Schema.define(version: 20141102122129) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
   end
 
   add_index "houses", ["type_id"], name: "index_houses_on_type_id", using: :btree

@@ -45,9 +45,12 @@ gem 'devise'
 ### Form Simplified ###
 gem 'simple_form'
 
-### Display better errors ###
-gem "better_errors"
-gem 'binding_of_caller'
+group :development do
+	### Display better errors ###
+	gem "better_errors"
+	gem 'binding_of_caller'
+	gem 'annotate'
+end
 
 ### Handle image on cloudinary ###
 gem 'paperclip', github: 'thoughtbot/paperclip'
