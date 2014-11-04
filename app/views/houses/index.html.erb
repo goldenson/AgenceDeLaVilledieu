@@ -1,0 +1,86 @@
+<!-- BEGIN PAGE TITLE/BREADCRUMB -->
+<div class="parallax colored-bg pattern-bg" data-stellar-background-ratio="0.5">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1 class="page-title">Biens de l'agence </h1>
+				
+				<ul class="breadcrumb">
+					<li><%= link_to "Accueil", page_path('home') %></li>
+					<li><%= link_to 'Biens Immobiliers', houses_path %></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END PAGE TITLE/BREADCRUMB -->
+
+<!-- BEGIN CONTENT WRAPPER -->
+<div class="content">
+	<div class="container">
+		<div class="row">
+		
+			<!-- BEGIN MAIN CONTENT -->
+			<div class="main col-sm-12">
+				
+				<!-- BEGIN PROPERTY LISTING -->
+				<div id="property-listing" class="grid-style1 clearfix">
+					<div class="row">
+						<% @houses.each do |house| %>
+							<div class="item col-md-4"><!-- Set width to 4 columns for grid view mode only -->
+								<div class="image">
+									<%= link_to house do %>
+									  <span class="btn btn-default"><i class="fa fa-file-o"></i>Details</span>
+									<% end %>
+									<!-- Display the last photos uploaded -->
+									<%= image_tag(house.pictures[0].image.url(:large), size: "360x317") %>
+									<!--  house.created_at.strftime("%m-%d-%Y") %> -->
+								</div>
+								<div class="price">
+									<i class="fa fa-home"></i>A vendre
+									<span><%= house.price %> $</span>
+								</div>
+								<div class="info">
+									<h3>
+										<a href="properties-detail.html"><%= house.name %></a>
+										<small><%= house.address %></small>
+									</h3>
+									<p><%= house.description %>.</p>
+								
+									<ul class="amenities">
+										<li><i class="icon-area"></i> <%= house.area %> m2</li>
+										<li><i class="icon-bedrooms"></i> <%= house.room %></li>
+										<li><i class="icon-bathrooms"></i> <%= house.bathroom %></li>
+									</ul>
+								</div>
+							</div>
+						<% end %>
+					</div>
+				</div>
+				<!-- END PROPERTY LISTING -->
+				
+				
+				<!-- BEGIN PAGINATION -->
+				<!-- <div class="pagination">
+					<ul id="previous">
+						<li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+					</ul>
+					<ul>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+					</ul>
+					<ul id="next">
+						<li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+					</ul>
+				</div> -->
+				<!-- END PAGINATION -->
+				
+			</div>	
+			<!-- END MAIN CONTENT -->
+
+		</div>
+	</div>
+</div>
+<!-- END CONTENT WRAPPER

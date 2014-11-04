@@ -5,8 +5,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					
-					<!-- NEED TO FIX THIS -->
-					<%= image_tag 'logo.png' %>
+					<%= link_to (image_tag 'logo.png', class: "nav-logo") %>
 					
 					<!-- BEGIN SEARCH -->
 					<!-- <div id="sb-search" class="sb-search">
@@ -24,7 +23,7 @@
 						
 						<ul class="nav navbar-nav">
 							<li><%= link_to "Accueil", page_path('home') %></li>
-							<li><%= link_to 'Biens Immobiliers', page_path('house') %></li>
+							<li><%= link_to 'Biens Immobiliers', houses_path %></li>
 							<li><%= link_to "A Propos", page_path('about') %></li>
 							<li><%= link_to "Contactez nous", page_path('contact') %></li>
 						</ul>
