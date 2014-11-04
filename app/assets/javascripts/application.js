@@ -14,4 +14,6 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require turbolinks
+//= require waypoints.min
+//= require waypoints-sticky.min
 //= require_tree .
