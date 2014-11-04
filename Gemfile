@@ -28,8 +28,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-
-
 ### Boostrap ###
 gem 'bootstrap-sass'
 
@@ -49,6 +47,7 @@ group :development do
 	### Display better errors ###
 	gem "better_errors"
 	gem 'binding_of_caller'
+	### Annotate for model ###
 	gem 'annotate'
 end
 
@@ -57,9 +56,6 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 
 ### Handle S3 ###
 gem 'aws-sdk'
-
-### Annotate for model ###
-#gem 'annotate', github: 'ctran/annotate_models'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

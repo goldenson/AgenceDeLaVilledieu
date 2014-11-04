@@ -1,0 +1,39 @@
+<!-- BEGIN HEADER -->
+<header id="header">
+	<div id="nav-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					
+					<!-- NEED TO FIX THIS -->
+					<%= image_tag 'logo.png' %>
+					
+					<!-- BEGIN SEARCH -->
+					<!-- <div id="sb-search" class="sb-search">
+						<form>
+							<input class="sb-search-input" placeholder="Search..." type="text" value="" name="search" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+							<i class="fa fa-search sb-icon-search"></i>
+						</form>
+					</div> -->
+					<!-- END SEARCH -->
+
+					<!-- BEGIN MAIN MENU -->
+					<nav class="navbar">
+						<button id="nav-mobile-btn"><i class="fa fa-bars"></i></button>
+						
+						<ul class="nav navbar-nav">
+							<li><%= link_to "Accueil", page_path('home') %></li>
+							<li><%= link_to 'Biens Immobiliers', page_path('house') %></li>
+							<li><%= link_to "A Propos", page_path('about') %></li>
+							<li><%= link_to "Contactez nous", page_path('contact') %></li>
+						</ul>
+						
+					</nav>
+					<!-- END MAIN MENU -->
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- END HEADER -->
