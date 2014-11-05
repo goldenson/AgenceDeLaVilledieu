@@ -37,11 +37,11 @@ ActiveAdmin.register House do
 
 
   index do
-    column :name
-    column :address
-    column :type
-    column :piece
-    column :area
+    column :nom, :name
+    column :addresse, :address
+    column :categorie, :type
+    column :nombre_de_piece, :piece
+    column :superficie, :area
     column :price do |house|
       number_to_currency house.price, :unit => "€"
     end
@@ -51,27 +51,27 @@ ActiveAdmin.register House do
   form :html => { :multipart => true } do |f|
 
    f.inputs "Informations Principales" do
-      f.input :type, :label => "Category", :hint => "Selectionner une categorie"
-      f.input :price
-      f.input :name
-      f.input :address
+      f.input :type, :label => "Categorie", :hint => "Selectionner une categorie"
+      f.input :price, :label => "Prix"
+      f.input :name, :label => "Nom"
+      f.input :address, :label => "Adresse"
       f.input :description
-      f.input :area
-      f.input :piece
-      f.input :room
-      f.input :bathroom
-      f.input :toilette
-      f.input :mainarea
-      f.input :outdoorarea
+      f.input :area, :label => "Superficie"
+      f.input :piece, :label => "Nombre de piece"
+      f.input :room, :label => "Nombre de chambre"
+      f.input :bathroom, :label => "Nombre de salle de bain"
+      f.input :toilette, :label => "Nombre de toilette"
+      f.input :mainarea, :label => "Superficie salon"
+      f.input :outdoorarea, :label => "Superficie jardin"
    end
 
    f.inputs "Details" do
-      f.input :energy
+      f.input :energy, :label => "Energie"
       f.input :impact
-      f.input :tax
-      f.input :heating
-      f.input :construction
-      f.input :floor
+      f.input :tax, :label => "Taxe"
+      f.input :heating, :label => "Type de chauffage"
+      f.input :construction, :label => "Annee de construction"
+      f.input :floor, :label => "Etage"
    end
 
    f.inputs "Photos" do
@@ -83,5 +83,5 @@ ActiveAdmin.register House do
 
    f.actions
  end
-
+ config.filters = false
 end
