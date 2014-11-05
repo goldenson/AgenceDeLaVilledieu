@@ -54,6 +54,8 @@ ActiveAdmin.register House do
       f.input :type, :label => "Category", :hint => "Selectionner une categorie"
       f.input :price
       f.input :name
+      f.input :address
+      f.input :description
       f.input :area
       f.input :piece
       f.input :room
@@ -61,7 +63,6 @@ ActiveAdmin.register House do
       f.input :toilette
       f.input :mainarea
       f.input :outdoorarea
-      f.input :address
    end
 
    f.inputs "Details" do
@@ -71,7 +72,6 @@ ActiveAdmin.register House do
       f.input :heating
       f.input :construction
       f.input :floor
-      f.input :description
    end
 
    f.inputs "Photos" do

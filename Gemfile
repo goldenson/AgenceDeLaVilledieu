@@ -32,7 +32,7 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass'
 
 ### Static pages ###
-gem 'high_voltage'
+# gem 'high_voltage'
 
 ### Active Admin ###
 gem 'activeadmin', github: 'gregbell/active_admin'

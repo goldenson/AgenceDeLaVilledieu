@@ -6,8 +6,9 @@
 				<h1 class="page-title"><%= @house.name %></h1>
 				
 				<ul class="breadcrumb">
-					<li><%= link_to "Accueil", page_path('home') %></li>
+					<li><%= link_to "Accueil", root_path %></li>
 					<li><%= link_to 'Biens Immobiliers', houses_path %></li>
+					<li><%= link_to @house.name, @house %></li>
 				</ul>
 
 			</div>
@@ -39,7 +40,7 @@
 						<li><i class="icon-bathrooms"></i> <%= @house.bathroom %></li>
 					</ul>
 					
-					<div id="property-id">ID: #<%= @house.id %></div>
+					<div id="property-id">Posté le : <%= @house.created_at.strftime("%d-%m-%Y") %></div>
 				</div>
 
 				<!-- BEGIN PROPERTY DETAIL SLIDERS WRAPPER -->
@@ -78,42 +79,42 @@
 				
 				
 				<!-- BEGIN PROPERTY AMENITIES LIST -->
-<!-- 				<ul class="property-amenities-list col-md-4">
-					<li class="enabled"> Security System </li>
-					<li class="enabled"> Parking On Street </li>
+ 				<ul class="property-amenities-list col-md-4">
+					<li class="enabled"> Alarme </li>
+					<li class="enabled"> Place de parking </li>
 					<li class="enabled"> Garage </li>
-					<li class="enabled"> Internet </li>
+<!-- 					<li class="enabled"> Internet </li>
 					<li class="enabled"> Telephone </li>
 					<li class="disabled"> Alarm Clock </li>
 					<li class="disabled"> Water Cooler </li>
 					<li class="enabled"> Air Conditioning </li>
-					<li class="enabled"> Heating </li>
+					<li class="enabled"> Cha </li> -->
 				</ul>
 				
 				<ul class="property-amenities-list col-md-4">
-					<li class="enabled"> Washing Machine </li>
-					<li class="disabled"> Clothes Dryer </li>
-					<li class="enabled"> Fireplace </li>
-					<li class="disabled"> Sofa Bed </li>
+					<li class="enabled"> Cuisine equipe </li>
+					<li class="enabled"> Salle de bain neuve </li>
+					<li class="disabled"> Terrasse </li>
+	<!-- 				<li class="disabled"> Sofa Bed </li>
 					<li class="enabled"> Dishwasher </li>
 					<li class="enabled"> Refrigerator </li>
 					<li class="disabled"> Freezer </li>
 					<li class="enabled"> Oven </li>
-					<li class="enabled"> Microwave </li>
+					<li class="enabled"> Microwave </li> -->
 				</ul>
 				
 				<ul class="property-amenities-list col-md-4">
-					<li class="enabled"> Coffee Maker </li>
+<!-- 					<li class="enabled"> Coffee Maker </li>
 					<li class="enabled"> Toaster </li>
 					<li class="disabled"> Ice Maker </li>
 					<li class="enabled"> Stove </li>
-					<li class="enabled"> Dishes & Utensils </li>
-					<li class="enabled"> Satellite / Cable TV  </li>
-					<li class="enabled"> Balcony </li>
-					<li class="disabled"> Deck / Patio </li>
-					<li class="enabled"> Outdoor Grill </li>
+					<li class="enabled"> Dishes & Utensils </li> -->
+					<li class="enabled"> Cable TV </li>
+					<li class="disabled"> Fibre Optique</li>
+					<li class="enabled"> Barbecue exterieur </li>
+					<!-- <li class="enabled"> Outdoor Grill </li> -->
 				</ul>
-				<!- END PROPERTY AMENITIES LIST -->
+				<!-- END PROPERTY AMENITIES LIST -->
 				
 				
 				<h1 class="section-title">Atouts principaux</h1>
@@ -138,14 +139,14 @@
 				<!-- END PROPERTY FEATURES LIST -->
 				
 				
-				<h1 class="section-title">Partagez cette propriete</h1>
+<!-- 				<h1 class="section-title">Partagez cette propriete</h1>
 				
 				<div class="share-wraper col-sm-12">
 					<h5>Envoyer a un ami:</h5>
 					<ul class="social-networks">
-<!-- 						<li><a target="_blank" href="http://www.facebook.com/sharer.php?s=100&amp;p%5Burl%5D=http%3A%2F%2Fwww.wiselythemes.com%2Fhtml%2Fcozy%2Fproperties-detail.html%3Ffb%3Dtrue&amp;p%5Bimages%5D%5B0%5D=http%3A%2F%2Fwww.wiselythemes.com%2Fhtml%2Fcozy%2Fimages%2Fdetail-img1.jpg&amp;p%5Btitle%5D=Cozy%20Property"><i class="fa fa-facebook"></i></a></li>
+						<li><a target="_blank" href="http://www.facebook.com/sharer.php?s=100&amp;p%5Burl%5D=http%3A%2F%2Fwww.wiselythemes.com%2Fhtml%2Fcozy%2Fproperties-detail.html%3Ffb%3Dtrue&amp;p%5Bimages%5D%5B0%5D=http%3A%2F%2Fwww.wiselythemes.com%2Fhtml%2Fcozy%2Fimages%2Fdetail-img1.jpg&amp;p%5Btitle%5D=Cozy%20Property"><i class="fa fa-facebook"></i></a></li>
 						<li><a target="_blank" href="https://twitter.com/intent/tweet?url=http://www.wiselythemes.com/html/cozy/properties-detail.html&amp;text=Cozy%20Property"><i class="fa fa-twitter"></i></a></li>
-						<li><a target="_blank" href="http://pinterest.com/pin/create/button/?url=http://www.wiselythemes.com/html/cozy/properties-detail.html&amp;description=Cozy%20Property&amp;media=http%3A%2F%2Fwww.wiselythemes.com%2Fhtml%2Fcozy%2Fimages%2Fdetail-img1.jpg"><i class="fa fa-pinterest"></i></a></li> -->
+						<li><a target="_blank" href="http://pinterest.com/pin/create/button/?url=http://www.wiselythemes.com/html/cozy/properties-detail.html&amp;description=Cozy%20Property&amp;media=http%3A%2F%2Fwww.wiselythemes.com%2Fhtml%2Fcozy%2Fimages%2Fdetail-img1.jpg"><i class="fa fa-pinterest"></i></a></li>
 						<li><a target="_blank" href="https://plus.google.com/share?url=http://www.wiselythemes.com/html/cozy/properties-detail.html"><i class="fa fa-google"></i></a></li>
 						<li><a href="mailto:?subject=Check%20out%20this%20property%20I%20found!&amp;body=http://www.wiselythemes.com/html/cozy/properties-detail.html"><i class="fa fa-envelope"></i></a></li>
 					</ul>
@@ -153,10 +154,10 @@
 					<a class="print-button" href="javascript:window.print();">
 						<i class="fa fa-print"></i>
 					</a>
-				</div>
+				</div> -->
 			</div>	
 			<!-- END MAIN CONTENT -->
 		</div>
 	</div>
 </div>
-<!-- END CONTENT WRAPPER -->
+<!-- END CONTENT WRAPPER

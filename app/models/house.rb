@@ -6,16 +6,16 @@
 #  type_id      :integer
 #  name         :string(255)
 #  address      :string(255)
-#  area         :decimal(, )
-#  mainarea     :decimal(, )
+#  area         :integer
+#  mainarea     :integer
 #  piece        :integer
 #  room         :integer
 #  bathroom     :integer
 #  toilette     :integer
-#  price        :decimal(, )
-#  energy       :decimal(, )
-#  impact       :decimal(, )
-#  tax          :decimal(, )
+#  price        :integer
+#  energy       :integer
+#  impact       :integer
+#  tax          :integer
 #  heating      :string(255)
 #  construction :integer
 #  outdoorarea  :integer
