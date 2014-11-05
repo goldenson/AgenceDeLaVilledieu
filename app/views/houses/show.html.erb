@@ -52,7 +52,8 @@
 							
 					<!-- BEGIN PROPERTY DETAIL LARGE IMAGE SLIDER -->
 					<div id="property-detail-large" class="owl-carousel">
-						<%= @house.pictures.each do |picture| %>
+						<!-- BE CAREFUL DONT USE = IN EACH LOOP MOTHAFUCKA -->
+						<% @house.pictures.each do |picture| %>
 							<div class="item">
 								<%= image_tag(picture.image.url(:large), size: "750x500") %>
 							</div>
@@ -62,7 +63,7 @@
 					
 					<!-- BEGIN PROPERTY DETAIL THUMBNAILS SLIDER -->
 					<div id="property-detail-thumbs" class="owl-carousel">
-						<%= @house.pictures.each do |picture| %>
+						<% @house.pictures.each do |picture| %>
 							<div class="item">
 								<%= image_tag(picture.image.url(:medium), size: "150x150") %>
 							</div>
@@ -137,12 +138,10 @@
 				<!-- END PROPERTY FEATURES LIST -->
 				
 				
-				<h1 class="section-title">Property Location</h1>
-				<!-- PROPERTY MAP HOLDER -->
-				<div id="property_location" class="map col-sm-12"></div>
+				<h1 class="section-title">Partagez cette propriete</h1>
 				
 				<div class="share-wraper col-sm-12">
-					<h5>Partager cette propriete:</h5>
+					<h5>Envoyer a un ami:</h5>
 					<ul class="social-networks">
 <!-- 						<li><a target="_blank" href="http://www.facebook.com/sharer.php?s=100&amp;p%5Burl%5D=http%3A%2F%2Fwww.wiselythemes.com%2Fhtml%2Fcozy%2Fproperties-detail.html%3Ffb%3Dtrue&amp;p%5Bimages%5D%5B0%5D=http%3A%2F%2Fwww.wiselythemes.com%2Fhtml%2Fcozy%2Fimages%2Fdetail-img1.jpg&amp;p%5Btitle%5D=Cozy%20Property"><i class="fa fa-facebook"></i></a></li>
 						<li><a target="_blank" href="https://twitter.com/intent/tweet?url=http://www.wiselythemes.com/html/cozy/properties-detail.html&amp;text=Cozy%20Property"><i class="fa fa-twitter"></i></a></li>
@@ -160,4 +159,4 @@
 		</div>
 	</div>
 </div>
-<!-- END CONTENT WRAPPER
+<!-- END CONTENT WRAPPER -->

@@ -32,8 +32,8 @@
 									<%= link_to house do %>
 									  <span class="btn btn-default"><i class="fa fa-file-o"></i>Details</span>
 									<% end %>
-									<!-- Display the last photos uploaded -->
-									<%= image_tag(house.pictures[0].image.url(:large), size: "360x317") %>
+									<!-- Display the first photos uploaded -->
+									<%= image_tag(house.pictures.first.image.url(:large), size: "360x317") %>
 									<!--  house.created_at.strftime("%m-%d-%Y") %> -->
 								</div>
 								<div class="price">

@@ -1,43 +1,53 @@
-	<!-- BEGIN HOME SEARCH SECTION -->
-	<section id="home-search-section" data-stellar-background-ratio="0.5">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12" data-animation-direction="from-top" data-animation-delay="50">
+		<!-- BEGIN HOME SLIDER SECTION -->
+		<div class="revslider-container">
+			<div class="revslider" >
+				<ul>
+					<li data-transition="fade" data-slotamount="7">
+						<img src="http://placehold.it/1920x605" alt="" />
+						<div class="caption sfr slider-title" data-x="70" data-y="120" data-speed="800" data-start="1300" data-easing="easeOutBack" data-end="9600" data-endspeed="700" data-endeasing="easeInSine">Bienvenue!</div>
+						<div class="caption sfl slider-subtitle" data-x="75" data-y="190" data-speed="800" data-start="1500" data-easing="easeOutBack" data-end="9700" data-endspeed="500" data-endeasing="easeInSine">Nouveau site de l'agence de la villedieu, parcourez notre gallerie.</div>
+						<%= link_to 'Biens Immobiliers', houses_path, class: "caption sfb btn btn-default btn-lg", :data => { :x => '75', :y => '260', :speed => '800', :easing => 'easeOutBack', :start => '1600', :end => '9800', :endspeed => 'endspeed', :endeasing => 'easeInSine' } %>
+					</li>
 					
-					<h2 class="slider-title">Trouver votre futur maison</h2>
-					<div class="slider-subtitle">Transactions vente, locations. Estimations gratuites.</div>
-				</div>
-				
-				<div id="home-search-buttons" class="col-sm-6 col-sm-offset-3" data-animation-direction="from-bottom" data-animation-delay="250">
-					<button class="btn btn-default active">For Sale</button>
-					<button class="btn btn-default">For Rent</button>
-					
-					<!-- <div class="input-group">
-						<input type="text" placeholder="City, State, Country, etc..." name="home_search" id="home_search" class="form-control" />
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="button"><i class="fa fa-search"></i>Search</button>
-						</span>
-					</div> -->
-					
-					<!-- <a href="#" class="advanced-search">Advanced Search</a> -->
-				</div>
+					<li data-transition="fade">
+						<img src="http://placehold.it/1920x605" alt="" />
+						<div class="caption sfr slider-title" data-x="450" data-y="120" data-speed="800" data-start="1300" data-easing="easeOutBack" data-end="9600" data-endspeed="500" data-endeasing="easeInSine">Agent immobiler</div>
+						<div class="caption sfl slider-subtitle" data-x="455" data-y="190" data-speed="800" data-start="1500" data-easing="easeOutBack" data-end="9700" data-endspeed="500" data-endeasing="easeInSine">Transactions vente, locations. Estimations gratuites.<br/>Contactez nous pour en savoir plus.<br/></div>
+						<%= link_to 'En savoir plus', houses_path, class: "caption sfb btn btn-default btn-lg", :data => { :x => '455', :y => '310', :speed => '800', :easing => 'easeOutBack', :start => '1600', :end => '9800', :endspeed => '500', :endeasing => 'easeInSine' } %>
+					</li>
+				</ul>
 			</div>
 		</div>
-	</section>
-	<!-- END HOME SEARCH SECTION -->
+		<!-- END HOME SLIDER SECTION -->
 
-	<!-- BEGIN ACTION BOX -->
-	<div class="action-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 center">
-					<h2>Cozy - Real Estate Template it's Awesome!<br/>It offers you a lot of great features.</h2>
-					<div><a href="http://themeforest.net/user/WiselyThemes" target="_blank" class="btn btn-default btn-lg">Buy Now!</a></div>
+	<!-- BEGIN CONTENT WRAPPER -->
+	<div class="row">
+			<!-- BEGIN MAIN CONTENT -->
+			<div class="main col-sm-8 col-sm-offset-2">
+				<h1 class="section-title" data-animation-direction="from-bottom" data-animation-delay="50">Services de l'agence</h1>
+
+				<div class="feature col-sm-4" data-animation-direction="from-bottom" data-animation-delay="250">
+					<i class="fa fa-pencil-square-o"></i>
+					<h3>Devis rapide et gratuit</h3>
+					<p>Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.</p>
+					<a href="about.html" class="btn btn-default-color">Read More</a>
 				</div>
+				<div class="feature col-sm-4" data-animation-direction="from-bottom" data-animation-delay="450">
+					<i class="icon-house-search"></i>
+					<h3>La maison qui vous correspond</h3>
+					<p>Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.</p>
+					<a href="about.html" class="btn btn-default-color">Read More</a>
+				</div>
+				<div class="feature col-sm-4" data-animation-direction="from-bottom" data-animation-delay="650">
+					<i class="fa fa-thumbs-o-up"></i>
+					<h3>Un savoir faire d'expertise</h3>
+					<p>Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.</p>
+					<a href="about.html" class="btn btn-default-color">Read More</a>
+				</div>						
 			</div>
-		</div>
+			<!-- END MAIN CONTENT -->
 	</div>
-	<!-- END ACTION BOX -->
+	<!-- END CONTENT WRAPPER -->
 
 	<!-- BEGIN PROPERTIES SLIDER WRAPPER-->
 	<div class="parallax pattern-bg" data-stellar-background-ratio="0.5">
@@ -225,37 +235,8 @@
 	</div>
 	<!-- END PROPERTIES SLIDER WRAPPER -->
 
-	<!-- BEGIN CONTENT WRAPPER -->
-	<div class="row">
-			<!-- BEGIN MAIN CONTENT -->
-			<div class="main col-sm-8 col-sm-offset-2">
-				<h1 class="section-title" data-animation-direction="from-bottom" data-animation-delay="50">Services de l'agence</h1>
-
-				<div class="feature col-sm-4" data-animation-direction="from-bottom" data-animation-delay="250">
-					<i class="fa fa-pencil-square-o"></i>
-					<h3>Devis rapide et gratuit</h3>
-					<p>Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.</p>
-					<a href="about.html" class="btn btn-default-color">Read More</a>
-				</div>
-				<div class="feature col-sm-4" data-animation-direction="from-bottom" data-animation-delay="450">
-					<i class="icon-house-search"></i>
-					<h3>La maison qui vous correspond</h3>
-					<p>Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.</p>
-					<a href="about.html" class="btn btn-default-color">Read More</a>
-				</div>
-				<div class="feature col-sm-4" data-animation-direction="from-bottom" data-animation-delay="650">
-					<i class="fa fa-thumbs-o-up"></i>
-					<h3>Un savoir faire d'expertise</h3>
-					<p>Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.</p>
-					<a href="about.html" class="btn btn-default-color">Read More</a>
-				</div>						
-			</div>
-			<!-- END MAIN CONTENT -->
-	</div>
-	<!-- END CONTENT WRAPPER -->
-
 	<!-- BEGIN PARTNERS WRAPPER -->
-	<div class="parallax pattern-bg" data-stellar-background-ratio="0.5">
+	<!-- <div class="parallax pattern-bg" data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -278,5 +259,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- END PARTNERS WRAPPER -->

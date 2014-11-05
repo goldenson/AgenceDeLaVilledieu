@@ -8,7 +8,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Lafayette St New York, NY <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-residential.png"
+		"map_marker_icon":"/assets/markers/coral-marker-residential.png"
 	},
 	{
 		"id": 1,
@@ -18,7 +18,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"2nd Ave, New York, NY <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-commercial.png"
+		"map_marker_icon":"/assets/markers/coral-marker-commercial.png"
 	},
 	{
 		"id": 2,
@@ -28,7 +28,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"St Marks Pl, New York, NY <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-commercial.png"
+		"map_marker_icon":"/assets/markers/coral-marker-commercial.png"
 	},
 	{
 		"id": 3,
@@ -38,7 +38,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"St Marks Pl New York, NY <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-residential.png"
+		"map_marker_icon":"/assets/markers/coral-marker-residential.png"
 	},
 	{
 		"id": 4,
@@ -48,7 +48,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Cooper Square, New York, NY <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-residential.png"
+		"map_marker_icon":"/assets/markers/coral-marker-residential.png"
 	},
 	{
 		"id": 5,
@@ -58,7 +58,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Broadway, New York, NY <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-residential.png"
+		"map_marker_icon":"/assets/markers/coral-marker-residential.png"
 	},
 	{
 		"id": 6,
@@ -68,7 +68,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Lenox Ave, Miami Beach, FL <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-residential.png"
+		"map_marker_icon":"/assets/markers/coral-marker-residential.png"
 	},
 	{
 		"id": 7,
@@ -78,7 +78,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Washington Ave, Miami Beach, FL <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-commercial.png"
+		"map_marker_icon":"/assets/markers/coral-marker-commercial.png"
 	},
 	{
 		"id": 8,
@@ -88,7 +88,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Convention Center Dr, Miami Beach, FL <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-commercial.png"
+		"map_marker_icon":"/assets/markers/coral-marker-commercial.png"
 	},
 	{
 		"id": 9,
@@ -98,7 +98,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Uintah St, Colorado Springs, CO <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-land.png"
+		"map_marker_icon":"/assets/markers/coral-marker-land.png"
 	},
 	{
 		"id": 10,
@@ -108,7 +108,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Swope Ave, Colorado Springs, CO <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-residential.png"
+		"map_marker_icon":"/assets/markers/coral-marker-residential.png"
 	},
 	{
 		"id": 11,
@@ -118,7 +118,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Bush St, San Francisco, CA <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-residential.png"
+		"map_marker_icon":"/assets/markers/coral-marker-residential.png"
 	},
 	{
 		"id": 12,
@@ -128,7 +128,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Kearny St, San Francisco, CA <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-commercial.png"
+		"map_marker_icon":"/assets/markers/coral-marker-commercial.png"
 	},
 	{
 		"id": 13,
@@ -138,7 +138,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Sacramento St, San Francisco, CA <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-commercial.png"
+		"map_marker_icon":"/assets/markers/coral-marker-commercial.png"
 	},
 	{
 		"id": 14,
@@ -148,7 +148,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Sacramento St, San Francisco, CA <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-residential.png"
+		"map_marker_icon":"/assets/markers/coral-marker-residential.png"
 	},
 	{
 		"id": 15,
@@ -158,7 +158,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"California St, San Francisco, CA <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-residential.png"
+		"map_marker_icon":"/assets/markers/coral-marker-residential.png"
 	},
 	{
 		"id": 16,
@@ -168,7 +168,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"11th Ave S, Nashville, TN <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-land.png"
+		"map_marker_icon":"/assets/markers/coral-marker-land.png"
 	},
 	{
 		"id": 17,
@@ -178,7 +178,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Horton Ave, Nashville, TN <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-residential.png"
+		"map_marker_icon":"/assets/markers/coral-marker-residential.png"
 	},
 	{
 		"id": 18,
@@ -188,7 +188,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Dolorosa, San Antonio, TX <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-commercial.png"
+		"map_marker_icon":"/assets/markers/coral-marker-commercial.png"
 	},
 	{
 		"id": 19,
@@ -198,7 +198,7 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"Central Ave, Phoenix, AZ <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-land.png"
+		"map_marker_icon":"/assets/markers/coral-marker-land.png"
 	},
 	{
 		"id": 20,
@@ -208,6 +208,6 @@ var properties = [
 		"image":"http://placehold.it/760x670",
 		"description":"12th St, Kansas City, MO <br> Phone: (123) 546-7890",
 		"link":"property-details.html",
-		"map_marker_icon":"images/markers/coral-marker-residential.png"
+		"map_marker_icon":"/assets/markers/coral-marker-residential.png"
 	}
 ];

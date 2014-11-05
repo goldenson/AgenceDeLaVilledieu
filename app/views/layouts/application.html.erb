@@ -27,7 +27,6 @@
 	<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 	
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<%= csrf_meta_tags %>
 
 </head>
@@ -40,6 +39,8 @@
 		<%= render partial: 'layouts/footer' %>
 	</div>
 	<!-- END WRAPPER -->
+
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 </body>
 </html>

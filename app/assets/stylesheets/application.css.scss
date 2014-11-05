@@ -2525,14 +2525,14 @@ iframe[src="about:blank"] {
 }
 .pattern-bg {
   position: relative;
-  background-image: url('/assets/patterns/pattern1.jpg');
+  background-image: url('/assets/patterns/pattern3.jpg');
   width: 100%;
   height: 200%;
   background-repeat: repeat;
 }
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .pattern-bg {
-    background-image: url('/assets/patterns/pattern1@2x.jpg');
+    background-image: url('/assets/patterns/pattern3@2x.jpg');
   }
 }
 .pattern-bg:before {
