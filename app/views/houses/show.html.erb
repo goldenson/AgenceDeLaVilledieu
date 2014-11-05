@@ -48,7 +48,7 @@
 					
 					<div class="price">
 						<i class="fa fa-home"></i>A Vendre
-						<span>$<%= @house.price %></span>
+						<span><%= @house.price %> €</span>
 					</div>
 							
 					<!-- BEGIN PROPERTY DETAIL LARGE IMAGE SLIDER -->
@@ -121,20 +121,18 @@
 				<!-- BEGIN PROPERTY FEATURES LIST -->
 				<ul class="property-features col-sm-6">
 					<li><i class="icon-garage"></i> Garage pour 1 voiture</li>
-					<li><i class="icon-pool"></i> Outdoor Pool</li>
+					<li><i class="icon-pool"></i> Piscine exterieur</li>
 					<% if @house.type.name == "Maison" %>
 							<li><i class="icon-garden"></i> <%= @house.outdoorarea %> m2 de Jardin</li>
 						<% else %>
 							<li><i class="icon-apartment"></i> Etage № <%= @house.floor %></li>
 						<% end %>
-					<li><i class="icon-security"></i> Security System Installed</li>
 				</ul>
 				
 				<ul class="property-features col-sm-6">
-					<li><i class="icon-sale-sign"></i> This property is for sale</li>
-					<li><i class="icon-house-usd"></i> Flexible Payments</li>
+					<li><i class="icon-area"></i> Salon de <%= @house.mainarea %> m2</li>
 					<li><i class="icon-rooms"></i> <%= @house.room %> Chambres et <%= @house.bathroom %> Salle de bain</li>
-					<li><i class="icon-pets"></i> Pets Allowed</li>
+					<li><i class="icon-security"></i> Systeme de sécurité</li>
 				</ul>
 				<!-- END PROPERTY FEATURES LIST -->
 				
