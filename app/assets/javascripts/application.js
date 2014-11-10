@@ -14,9 +14,4 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require turbolinks
-//= require scripts
-//= require modernizr-2.8.1.min
-//= require owl.carousel.min
-//= require waypoints.min
-//= require waypoints-sticky.min
 //= require_tree .
