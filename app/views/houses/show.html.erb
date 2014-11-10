@@ -120,19 +120,21 @@
 				<h1 class="section-title">Atouts principaux</h1>
 				<!-- BEGIN PROPERTY FEATURES LIST -->
 				<ul class="property-features col-sm-6">
-					<li><i class="icon-garage"></i> Garage pour 1 voiture</li>
-					<li><i class="icon-pool"></i> Piscine exterieur</li>
 					<% if @house.type.name == "Maison" %>
-							<li><i class="icon-garden"></i> <%= @house.outdoorarea %> m2 de Jardin</li>
+							<li><i class="icon-garden"></i> <%= @house.outdoorarea %> m2 de jardin</li>
+							<li><i class="icon-house-euro"></i> Taxe foncière : <%= @house.tax %> €</li>
+							<li><i class="icon-area"></i> Salon de <%= @house.mainarea %> m2</li>
 						<% else %>
 							<li><i class="icon-apartment"></i> Etage № <%= @house.floor %></li>
-						<% end %>
+							<li><i class="icon-apartment-euro"></i> Taxe foncière : <%= @house.tax %> €</li>
+							<li><i class="icon-apartment-euro"></i> Charges mensuelles : <%= @house.tax %> €</li>
+					<% end %>
 				</ul>
 				
 				<ul class="property-features col-sm-6">
-					<li><i class="icon-area"></i> Salon de <%= @house.mainarea %> m2</li>
-					<li><i class="icon-rooms"></i> <%= @house.room %> Chambres et <%= @house.bathroom %> Salle de bain</li>
-					<li><i class="icon-security"></i> Systeme de sécurité</li>
+					<li><i class="icon-garage"></i> Garage pour 1 voiture</li>
+					<li><i class="icon-bedrooms"></i> <%= @house.room %> Chambres</li>
+					<li><i class="icon-bathrooms"></i> <%= @house.bathroom %> Salle de bain</li>
 				</ul>
 				<!-- END PROPERTY FEATURES LIST -->
 				
