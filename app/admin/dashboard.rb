@@ -3,31 +3,27 @@ ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
 
   content title: proc{ I18n.t("active_admin.dashboard") } do
-    div class: "blank_slate_container", id: "dashboard_default_message" do
-      span class: "blank_slate" do
-        span I18n.t("active_admin.dashboard_welcome.welcome")
-        small I18n.t("active_admin.dashboard_welcome.call_to_action")
+
+    panel "Liste des derniers biens" do
+      table_for House.order('created_at desc').limit(10) do
+        column "Categorie" do |a|
+          a.type.name
+        end
+        column "Biens" do |a|
+          link_to a.name, admin_house_path(a.id)
+        end
+        column "Nombre de pieces" do |a|
+          a.piece
+        end
+        column "Superficie" do |a|
+          a.area
+        end
+                column "Prix" do |a|
+          status_tag((number_to_currency a.price, :unit => "€"), (:ok))
+        end
       end
     end
 
-    # Here is an example of a simple dashboard with columns and panels.
-    #
-    # columns do
-    #   column do
-    #     panel "Recent Posts" do
-    #       ul do
-    #         Post.recent(5).map do |post|
-    #           li link_to(post.title, admin_post_path(post))
-    #         end
-    #       end
-    #     end
-    #   end
+  end
 
-    #   column do
-    #     panel "Info" do
-    #       para "Welcome to ActiveAdmin."
-    #     end
-    #   end
-    # end
-  end # content
 end

@@ -37,6 +37,8 @@ ActiveAdmin.register House do
 
 
   index do
+    selectable_column
+    
     column :nom, :name
     column :addresse, :address
     column :categorie, :type
@@ -67,7 +69,7 @@ ActiveAdmin.register House do
 
    f.inputs "Details" do
       f.input :energy, :label => "Energie"
-      f.input :impact
+      f.input :impact, :label => "Emmision GES"
       f.input :tax, :label => "Taxe"
       f.input :heating, :label => "Type de chauffage"
       f.input :construction, :label => "Annee de construction"
