@@ -108,6 +108,7 @@
 							<li><i class="icon-house-euro"></i> Taxe foncière : <%= @house.tax %> €</li>
 							<li><i class="icon-area"></i> Salon de <%= @house.mainarea %> m2</li>
 							<li><i class="icon-garage"></i> Garage</li>
+							<li class="font-size-13"><i class="fa fa-recycle"></i>Diagnostic Performances Énergétiques : <b class="font-red-20" ><%= get_energy_letter(@house.energy) %></b> </li>
 							<!-- <li><i class="icon-house-percent"></i> Frais d'agence : <%= @house.tax %> %</li> -->
 						<% else %>
 							<li><i class="icon-apartment"></i> Etage № <%= @house.floor %></li>
@@ -125,7 +126,8 @@
 					<li><i class="icon-rooms"></i> <%= @house.piece %> Pièces</li>
 					<li><i class="icon-bedrooms"></i> <%= @house.room %> Chambres</li>
 					<li><i class="icon-bathrooms"></i> <%= @house.bathroom %> Salles de bain</li>
-					<li><i class="icon-security"></i> <%= @house.heating %></li>
+					<li><i class="fa fa-fire"></i> <%= @house.heating %></li>
+					<li><i class="fa fa-flash"></i>Gaz à effet de serre : <b class="font-red-20" ><%= get_impact_letter(@house.impact) %></b> </li>
 				</ul>
 				<!-- END PROPERTY FEATURES LIST -->
 				
