@@ -18,7 +18,7 @@ ActiveAdmin.register_page "Dashboard" do
         column "Superficie" do |a|
           a.area
         end
-                column "Prix" do |a|
+        column "Prix" do |a|
           status_tag((number_to_currency a.price, :unit => "€"), (:ok))
         end
       end

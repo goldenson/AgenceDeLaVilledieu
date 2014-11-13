@@ -1,118 +1,91 @@
-		<!-- BEGIN HOME SLIDER SECTION -->
-		<div class="revslider-container">
-			<div class="revslider" >
-				<ul>
-					<li data-transition="fade" data-slotamount="1">
-						<%= image_tag('Agence.jpg', size: "1920x605") %>
-						<div class="caption sfr slider-title" data-x="70" data-y="280" data-speed="800" data-start="1300">Bienvenue!</div>
-						<div class="caption sfl slider-subtitle" data-x="75" data-y="350" data-speed="800" data-start="1500">Transactions vente, locations. Estimations gratuites.<br/>Contactez nous pour en savoir plus.<br/></div>
-						<%= link_to 'Biens Immobiliers', houses_path, class: "caption sfb btn btn-fullcolor btn-default btn-lg", :data => { :x => '75', :y => '420', :speed => '800', :start => '1600'} %>
-					</li>
-					
+	<!-- BEGIN HOME SLIDER SECTION -->
+	<div class="revslider-container">
+		<div class="revslider" >
+			<ul>
+				<li data-transition="fade" data-slotamount="1">
+					<%= image_tag('Agence.jpg', size: "1920x605") %>
+					<div class="caption sfr slider-title" data-x="70" data-y="280" data-speed="800" data-start="1300">Bienvenue!</div>
+					<div class="caption sfl slider-subtitle" data-x="75" data-y="350" data-speed="800" data-start="1500">Transactions vente, locations. Estimations gratuites.<br/>Contactez nous pour en savoir plus.<br/></div>
+					<%= link_to 'Biens Immobiliers', houses_path, class: "caption sfb btn btn-fullcolor btn-default btn-lg", :data => { :x => '75', :y => '420', :speed => '800', :start => '1600'} %>
+				</li>
+				
 <!-- 					<li data-transition="fade">
-						< image_tag('Agence.jpg', size: "1920x605") %>
-						<div class="caption sfr slider-title" data-x="450" data-y="120" data-speed="800" data-start="1300" data-easing="easeOutBack" data-end="9600" data-endspeed="500" data-endeasing="easeInSine">Agent immobiler</div>
-						<div class="caption sfl slider-subtitle" data-x="455" data-y="190" data-speed="800" data-start="1500" data-easing="easeOutBack" data-end="9700" data-endspeed="500" data-endeasing="easeInSine">Transactions vente, locations. Estimations gratuites.<br/>Contactez nous pour en savoir plus.<br/></div>
-						< link_to 'En savoir plus', houses_path, class: "caption sfb btn btn-default btn-lg", :data => { :x => '455', :y => '310', :speed => '800', :easing => 'easeOutBack', :start => '1600', :end => '9800', :endspeed => '500', :endeasing => 'easeInSine' } %>
-					</li> -->
-				</ul>
-			</div>
-		</div>
-		<!-- END HOME SLIDER SECTION -->
-
-	<!-- BEGIN CONTENT WRAPPER -->
-	<div class="row">
-			<!-- BEGIN MAIN CONTENT -->
-			<div class="main col-sm-8 col-sm-offset-2">
-				<h1 class="section-title" data-animation-direction="from-bottom" data-animation-delay="50">Services de l'agence</h1>
-
-				<div class="feature col-sm-4" data-animation-direction="from-bottom" data-animation-delay="250">
-					<i class="fa fa-pencil-square-o"></i>
-					<h3>Devis rapide et gratuit</h3>
-					<p>Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.</p>
-					<!-- <a href="about.html" class="btn btn-default-color">Read More</a> -->
-				</div>
-				<div class="feature col-sm-4" data-animation-direction="from-bottom" data-animation-delay="450">
-					<i class="icon-house-search"></i>
-					<h3>La maison qui vous correspond</h3>
-					<p>Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.</p>
-					<!-- <a href="about.html" class="btn btn-default-color">Read More</a> -->
-				</div>
-				<div class="feature col-sm-4" data-animation-direction="from-bottom" data-animation-delay="650">
-					<i class="fa fa-thumbs-o-up"></i>
-					<h3>Un savoir faire d'expertise</h3>
-					<p>Pellentesque elementum libero enim, eget gravida nunc laoreet et. Nullam ac enim auctor, fringilla risus at, imperdiet turpis.</p>
-					<!-- <a href="about.html" class="btn btn-default-color">Read More</a> -->
-				</div>						
-			</div>
-			<!-- END MAIN CONTENT -->
-	</div>
-	<!-- END CONTENT WRAPPER -->
-
-	<!-- BEGIN PROPERTIES SLIDER WRAPPER-->
-	<div class="parallax pattern-bg" data-stellar-background-ratio="0.5">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<h1 class="section-title" data-animation-direction="from-bottom" data-animation-delay="50">Consultez nos dernières Propriétés</h1>
-					
-					<div id="new-properties-slider" class="owl-carousel carousel-style1">
-
-						<% @houses.each do |house| %>
-							<div class="item" data-animation-direction="from-bottom" data-animation-delay="250">
-								<div class="image">
-									<!-- <a href="properties-detail.html" class="info">
-										<h3><%= house.name %></h3>
-										<span class="location"><%= house.address %></span>
-									</a> -->
-									<%= link_to house, class: "info" do %>
-										<h3><%= house.name %></h3>
-										<span class="location"><%= house.address %></span>
-									<% end %>
-									<%= image_tag(house.pictures.first.image.url(:large), size: "360x317") %>
-									<!-- <img src="http://placehold.it/760x670" alt="" /> -->
-								</div>
-								<div class="price">
-									<i class="fa fa-home"></i>A vendre
-									<span><%= house.price %> €</span>
-								</div>
-								<ul class="amenities">
-									<li><i class="icon-area"></i> <%= house.area %> m2</li>
-									<li><i class="icon-bedrooms"></i> <%= house.room %></li>
-									<li><i class="icon-bathrooms"></i> <%= house.bathroom %></li>
-								</ul>
-							</div>
-						<% end %>
-					</div>			
-				</div>
-			</div>
+					< image_tag('Agence.jpg', size: "1920x605") %>
+					<div class="caption sfr slider-title" data-x="450" data-y="120" data-speed="800" data-start="1300" data-easing="easeOutBack" data-end="9600" data-endspeed="500" data-endeasing="easeInSine">Agent immobiler</div>
+					<div class="caption sfl slider-subtitle" data-x="455" data-y="190" data-speed="800" data-start="1500" data-easing="easeOutBack" data-end="9700" data-endspeed="500" data-endeasing="easeInSine">Transactions vente, locations. Estimations gratuites.<br/>Contactez nous pour en savoir plus.<br/></div>
+					< link_to 'En savoir plus', houses_path, class: "caption sfb btn btn-default btn-lg", :data => { :x => '455', :y => '310', :speed => '800', :easing => 'easeOutBack', :start => '1600', :end => '9800', :endspeed => '500', :endeasing => 'easeInSine' } %>
+				</li> -->
+			</ul>
 		</div>
 	</div>
-	<!-- END PROPERTIES SLIDER WRAPPER -->
+	<!-- END HOME SLIDER SECTION -->
 
-	<!-- BEGIN PARTNERS WRAPPER -->
-	<!-- <div class="parallax pattern-bg" data-stellar-background-ratio="0.5">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<h1 class="section-title" data-animation-direction="from-bottom" data-animation-delay="50">Our Partners</h1>
-					
-					<div id="partners">
+<!-- BEGIN CONTENT WRAPPER -->
+<div class="row">
+		<!-- BEGIN MAIN CONTENT -->
+		<div class="main col-sm-8 col-sm-offset-2">
+			<h1 class="section-title" data-animation-direction="from-bottom" data-animation-delay="50">Services de l'agence</h1>
+
+			<div class="feature col-sm-4" data-animation-direction="from-bottom" data-animation-delay="250">
+				<i class="fa fa-pencil-square-o"></i>
+				<h3>Devis rapide et gratuit</h3>
+				<p>L’agence vous propose une estimation gratuite sous 24h sur rendez-vous.</p>
+				<!-- <a href="about.html" class="btn btn-default-color">Read More</a> -->
+			</div>
+			<div class="feature col-sm-4" data-animation-direction="from-bottom" data-animation-delay="450">
+				<i class="icon-house-search"></i>
+				<h3>La maison qui vous correspond</h3>
+				<p>Un réseau de 11 agences pour trouver le bien qui vous correspond.</p>
+				<!-- <a href="about.html" class="btn btn-default-color">Read More</a> -->
+			</div>
+			<div class="feature col-sm-4" data-animation-direction="from-bottom" data-animation-delay="650">
+				<i class="fa fa-thumbs-o-up"></i>
+				<h3>Un savoir faire d'expertise</h3>
+				<p>Des professionnels qui vous accompagnent dans toutes vos démarches.</p>
+				<!-- <a href="about.html" class="btn btn-default-color">Read More</a> -->
+			</div>						
+		</div>
+		<!-- END MAIN CONTENT -->
+</div>
+<!-- END CONTENT WRAPPER -->
+
+<!-- BEGIN PROPERTIES SLIDER WRAPPER-->
+<div class="parallax pattern-bg" data-stellar-background-ratio="0.5">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1 class="section-title" data-animation-direction="from-bottom" data-animation-delay="50">Consultez nos dernières Propriétés</h1>
+				
+				<div id="new-properties-slider" class="owl-carousel carousel-style1">
+
+					<% @houses.each do |house| %>
 						<div class="item" data-animation-direction="from-bottom" data-animation-delay="250">
-							<a href="#"><img src="http://placehold.it/194x45" alt="" onmouseover="this.src='http://placehold.it/194x45';" onmouseout="this.src='http://placehold.it/194x45';" /></a>
+							<div class="image">
+								<!-- <a href="properties-detail.html" class="info">
+									<h3><%= house.name %></h3>
+									<span class="location"><%= house.address %></span>
+								</a> -->
+								<%= link_to house, class: "info" do %>
+									<h3><%= house.name %></h3>
+									<span class="location"><%= house.address %></span>
+								<% end %>
+								<%= image_tag(house.pictures.first.image.url(:large), size: "360x317") %>
+								<!-- <img src="http://placehold.it/760x670" alt="" /> -->
+							</div>
+							<div class="price">
+								<i class="fa fa-home"></i>A vendre
+								<span><%= house.price %> €</span>
+							</div>
+							<ul class="amenities">
+								<li><i class="icon-area"></i> <%= house.area %> m2</li>
+								<li><i class="icon-bedrooms"></i> <%= house.room %></li>
+								<li><i class="icon-bathrooms"></i> <%= house.bathroom %></li>
+							</ul>
 						</div>
-						<div class="item" data-animation-direction="from-bottom" data-animation-delay="450">
-							<a href="#"><img src="http://placehold.it/194x45" alt="" onmouseover="this.src='http://placehold.it/194x45';" onmouseout="this.src='http://placehold.it/194x45';" /></a>
-						</div>
-						<div class="item" data-animation-direction="from-bottom" data-animation-delay="650">
-							<a href="#"><img src="http://placehold.it/194x45" alt="" onmouseover="this.src='http://placehold.it/194x45';" onmouseout="this.src='http://placehold.it/194x45';" /></a>
-						</div>
-						<div class="item" data-animation-direction="from-bottom" data-animation-delay="850">
-							<a href="#"><img src="http://placehold.it/194x45" alt="" onmouseover="this.src='http://placehold.it/194x45';" onmouseout="this.src='http://placehold.it/194x45';" /></a>
-						</div>
-					</div>
-				</div>
+					<% end %>
+				</div>			
 			</div>
 		</div>
-	</div> -->
-	<!-- END PARTNERS WRAPPER -->
+	</div>
+</div>
+<!-- END PROPERTIES SLIDER WRAPPER -->

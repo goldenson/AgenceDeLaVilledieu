@@ -56,7 +56,7 @@
 						<!-- BE CAREFUL DONT USE = IN EACH LOOP MOTHAFUCKA -->
 						<% @house.pictures.each do |picture| %>
 							<div class="item">
-								<%= image_tag(picture.image.url(:large), size: "750x500") %>
+								<%= image_tag(picture.image.url(:large), size: "764x423") %>
 							</div>
 						<% end %>
 					</div>
@@ -66,7 +66,7 @@
 					<div id="property-detail-thumbs" class="owl-carousel">
 						<% @house.pictures.each do |picture| %>
 							<div class="item">
-								<%= image_tag(picture.image.url(:medium), size: "150x150") %>
+								<%= image_tag(picture.image.url(:medium), size: "148x131") %>
 							</div>
 						<% end %>
 					</div>
@@ -79,41 +79,24 @@
 				
 				
 				<!-- BEGIN PROPERTY AMENITIES LIST -->
- 				<ul class="property-amenities-list col-md-4">
-					<li class="enabled"> Alarme </li>
-					<li class="enabled"> Place de parking </li>
+				<!-- Not really useful -->
+<!--  				<ul class="property-amenities-list col-md-4">
+					<li class="enabled"> Cave </li>
 					<li class="enabled"> Garage </li>
-<!-- 					<li class="enabled"> Internet </li>
-					<li class="enabled"> Telephone </li>
-					<li class="disabled"> Alarm Clock </li>
-					<li class="disabled"> Water Cooler </li>
-					<li class="enabled"> Air Conditioning </li>
-					<li class="enabled"> Cha </li> -->
+					<li class="enabled"> Parking </li>
 				</ul>
 				
 				<ul class="property-amenities-list col-md-4">
-					<li class="enabled"> Cuisine equipe </li>
+					<li class="enabled"> Cuisine equipée </li>
+					<li class="enabled"> Terrasse </li>
 					<li class="enabled"> Salle de bain neuve </li>
-					<li class="disabled"> Terrasse </li>
-	<!-- 				<li class="disabled"> Sofa Bed </li>
-					<li class="enabled"> Dishwasher </li>
-					<li class="enabled"> Refrigerator </li>
-					<li class="disabled"> Freezer </li>
-					<li class="enabled"> Oven </li>
-					<li class="enabled"> Microwave </li> -->
 				</ul>
 				
 				<ul class="property-amenities-list col-md-4">
-<!-- 					<li class="enabled"> Coffee Maker </li>
-					<li class="enabled"> Toaster </li>
-					<li class="disabled"> Ice Maker </li>
-					<li class="enabled"> Stove </li>
-					<li class="enabled"> Dishes & Utensils </li> -->
-					<li class="enabled"> Cable TV </li>
-					<li class="disabled"> Fibre Optique</li>
-					<li class="enabled"> Barbecue exterieur </li>
-					<!-- <li class="enabled"> Outdoor Grill </li> -->
-				</ul>
+					<li class="enabled"> Ascenseur</li>
+					<li class="enabled"> Alarme </li>
+					<li class="enabled"> Barbecue extérieur </li>
+				</ul> -->
 				<!-- END PROPERTY AMENITIES LIST -->
 				
 				
@@ -124,17 +107,25 @@
 							<li><i class="icon-garden"></i> <%= @house.outdoorarea %> m2 de jardin</li>
 							<li><i class="icon-house-euro"></i> Taxe foncière : <%= @house.tax %> €</li>
 							<li><i class="icon-area"></i> Salon de <%= @house.mainarea %> m2</li>
+							<li><i class="icon-garage"></i> Garage</li>
+							<!-- <li><i class="icon-house-percent"></i> Frais d'agence : <%= @house.tax %> %</li> -->
 						<% else %>
 							<li><i class="icon-apartment"></i> Etage № <%= @house.floor %></li>
 							<li><i class="icon-apartment-euro"></i> Taxe foncière : <%= @house.tax %> €</li>
-							<li><i class="icon-apartment-euro"></i> Charges mensuelles : <%= @house.tax %> €</li>
+							<li><i class="icon-apartment-euro"></i> Charges annuelles : <%= @house.tax %> €</li>
+							<li><i class="icon-apartment-percent"></i> Frais d'agence : <%= @house.tax %> %</li>
+							<li><i class="icon-factory"></i> Nombre de lots : <%= @house.tax %> </li>
 					<% end %>
 				</ul>
 				
 				<ul class="property-features col-sm-6">
-					<li><i class="icon-garage"></i> Garage pour 1 voiture</li>
+					<% if @house.type.name == "Appartement" %>
+							<li><i class="icon-garage"></i> Parking</li>
+					<% end %>
+					<li><i class="icon-rooms"></i> <%= @house.piece %> Pièces</li>
 					<li><i class="icon-bedrooms"></i> <%= @house.room %> Chambres</li>
-					<li><i class="icon-bathrooms"></i> <%= @house.bathroom %> Salle de bain</li>
+					<li><i class="icon-bathrooms"></i> <%= @house.bathroom %> Salles de bain</li>
+					<li><i class="icon-security"></i> <%= @house.heating %></li>
 				</ul>
 				<!-- END PROPERTY FEATURES LIST -->
 				
