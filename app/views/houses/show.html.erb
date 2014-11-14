@@ -48,7 +48,7 @@
 					
 					<div class="price">
 						<i class="fa fa-home"></i>A Vendre
-						<span><%= @house.price %> €</span>
+						<span><%= get_price(@house.price) %></span>
 					</div>
 							
 					<!-- BEGIN PROPERTY DETAIL LARGE IMAGE SLIDER -->
@@ -100,7 +100,7 @@
 				<!-- END PROPERTY AMENITIES LIST -->
 				
 				
-				<h1 class="section-title">Atouts principaux</h1>
+				<h1 class="section-title">Caractéristiques du bien</h1>
 				<!-- BEGIN PROPERTY FEATURES LIST -->
 				<ul class="property-features col-sm-6">
 					<% if @house.type.name == "Maison" %>
@@ -116,6 +116,7 @@
 							<li><i class="icon-apartment-euro"></i> Charges annuelles : <%= @house.tax %> €</li>
 							<li><i class="icon-apartment-percent"></i> Frais d'agence : <%= @house.tax %> %</li>
 							<li><i class="icon-factory"></i> Nombre de lots : <%= @house.tax %> </li>
+							<li class="font-size-13"><i class="fa fa-recycle"></i>Diagnostic Performances Énergétiques : <b class="font-red-20" ><%= get_energy_letter(@house.energy) %></b> </li>
 					<% end %>
 				</ul>
 				
