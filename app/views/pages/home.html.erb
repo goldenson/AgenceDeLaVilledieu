@@ -1,24 +1,8 @@
-	<!-- BEGIN HOME SLIDER SECTION -->
-	<div class="revslider-container">
-		<div class="revslider" >
-			<ul>
-				<li data-transition="fade" data-slotamount="1">
-					<%= image_tag('Agence.jpg', size: "1920x605") %>
-					<div class="caption sfr slider-title" data-x="70" data-y="280" data-speed="800" data-start="1300">Bienvenue!</div>
-					<div class="caption sfl slider-subtitle" data-x="75" data-y="350" data-speed="800" data-start="1500">Transactions vente, locations. Estimations gratuites.<br/>Contactez nous pour en savoir plus.<br/></div>
-					<%= link_to 'Biens Immobiliers', houses_path, class: "caption sfb btn btn-fullcolor btn-default btn-lg", :data => { :x => '75', :y => '420', :speed => '800', :start => '1600'} %>
-				</li>
-				
-<!-- 					<li data-transition="fade">
-					< image_tag('Agence.jpg', size: "1920x605") %>
-					<div class="caption sfr slider-title" data-x="450" data-y="120" data-speed="800" data-start="1300" data-easing="easeOutBack" data-end="9600" data-endspeed="500" data-endeasing="easeInSine">Agent immobiler</div>
-					<div class="caption sfl slider-subtitle" data-x="455" data-y="190" data-speed="800" data-start="1500" data-easing="easeOutBack" data-end="9700" data-endspeed="500" data-endeasing="easeInSine">Transactions vente, locations. Estimations gratuites.<br/>Contactez nous pour en savoir plus.<br/></div>
-					< link_to 'En savoir plus', houses_path, class: "caption sfb btn btn-default btn-lg", :data => { :x => '455', :y => '310', :speed => '800', :easing => 'easeOutBack', :start => '1600', :end => '9800', :endspeed => '500', :endeasing => 'easeInSine' } %>
-				</li> -->
-			</ul>
-		</div>
+<div class="row">
+	<div class="col-md-12">
+		<%= image_tag('Agence.jpg', class: "width-100") %>
 	</div>
-	<!-- END HOME SLIDER SECTION -->
+</div>
 
 <!-- BEGIN CONTENT WRAPPER -->
 <div class="row">
@@ -73,7 +57,11 @@
 								<!-- <img src="http://placehold.it/760x670" alt="" /> -->
 							</div>
 							<div class="price">
-								<i class="fa fa-home"></i>A vendre
+								<% if house.type.name == "Maison" %>
+									<i class="icon-house"></i>A vendre
+								<% else %>
+									<i class="icon-apartment"></i>A vendre
+								<% end %>
 								<span><%= get_price(house.price) %></span>
 							</div>
 							<ul class="amenities">
