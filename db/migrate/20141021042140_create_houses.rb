@@ -13,7 +13,10 @@ class CreateHouses < ActiveRecord::Migration
       t.integer :price
       t.integer :energy
       t.integer :impact
-      t.integer :tax
+      t.integer :tax      
+      t.integer :fee
+      t.integer :charge
+      t.integer :lot
       t.string :heating
       t.integer :construction
       t.integer :outdoorarea

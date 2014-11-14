@@ -1,27 +1,30 @@
 ActiveAdmin.register House do
 
-  permit_params :type, :name, :address, :area, :mainarea, :piece, :room, :bathroom, :toilette, :price, :energy, :impact, :tax, :heating, :construction, :outdoorarea, :floor, :description, :type_id, pictures_attributes: [:id, :image, :_destroy]
+  permit_params :type, :name, :address, :area, :mainarea, :piece, :room, :bathroom, :toilette, :price, :energy, :impact, :tax, :fee, :charge, :lot, :heating, :construction, :outdoorarea, :floor, :description, :type_id, pictures_attributes: [:id, :image, :_destroy]
 
   show do |ad|
     
     attributes_table do
-      row :name
-      row :type
-      row :address
-      row :area
-      row :mainarea
-      row :piece
-      row :room
-      row :bathroom
-      row :toilette
-      row :price
-      row :energy
-      row :impact
-      row :tax
-      row :heating
-      row :construction
-      row :outdoorarea
-      row :floor
+      row :nom, :name
+      row :categorie, :type
+      row :addresse, :address
+      row :superficie, :area
+      row :superficie_salon, :mainarea
+      row :nombre_de_piece, :piece
+      row :nombre_de_chambre, :room
+      row :nombre_de_salle_de_bain, :bathroom
+      row :nombre_de_toilette, :toilette
+      row :prix, :price
+      row :energie, :energy
+      row :emision_ges, :impact
+      row :taxe_fonciere, :tax
+      row :frais_agence, :fee
+      row :charges_annuelles, :charge
+      row :nombre_de_lots, :lot
+      row :type_de_chauffage, :heating
+      row :annee_de_construction, :construction
+      row :superficie_jardin, :outdoorarea
+      row :etage, :floor
       row :description
     end
 
@@ -70,7 +73,10 @@ ActiveAdmin.register House do
    f.inputs "Details" do
       f.input :energy, :label => "Energie"
       f.input :impact, :label => "Emmision GES"
-      f.input :tax, :label => "Taxe"
+      f.input :tax, :label => "Taxe fonciere"
+      f.input :fee, :label => "Frais D'agence"
+      f.input :charge, :label => "Charges annuelles"
+      f.input :lot, :label => "Nombre de lots"
       f.input :heating, :label => "Type de chauffage"
       f.input :construction, :label => "Annee de construction"
       f.input :floor, :label => "Etage"

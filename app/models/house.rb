@@ -16,6 +16,9 @@
 #  energy       :integer
 #  impact       :integer
 #  tax          :integer
+#  fee          :integer
+#  charge       :integer
+#  lot          :integer
 #  heating      :string(255)
 #  construction :integer
 #  outdoorarea  :integer

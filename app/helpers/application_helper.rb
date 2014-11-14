@@ -46,7 +46,7 @@ module ApplicationHelper
 
 	def get_price(price)
 		n = price.to_s.reverse
-		return n.gsub(/(.{3})/, '\1 ').reverse + " € FAI"
+		return n.gsub(/(.{3})/, '\1 ').reverse
 	end
 
 end

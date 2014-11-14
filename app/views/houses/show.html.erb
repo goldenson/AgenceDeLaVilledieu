@@ -17,7 +17,6 @@
 </div>
 <!-- END PAGE TITLE/BREADCRUMB -->
 
-
 <!-- BEGIN CONTENT WRAPPER -->
 <div class="content">
 	<div class="container">
@@ -48,7 +47,7 @@
 					
 					<div class="price">
 						<i class="fa fa-home"></i>A Vendre
-						<span><%= get_price(@house.price) %></span>
+						<span><%= get_price(@house.price) + " € FAI"%></span>
 					</div>
 							
 					<!-- BEGIN PROPERTY DETAIL LARGE IMAGE SLIDER -->
@@ -77,29 +76,6 @@
 				<p><%= @house.description %></p>
 				<p>&nbsp;</p>
 				
-				
-				<!-- BEGIN PROPERTY AMENITIES LIST -->
-				<!-- Not really useful -->
-<!--  				<ul class="property-amenities-list col-md-4">
-					<li class="enabled"> Cave </li>
-					<li class="enabled"> Garage </li>
-					<li class="enabled"> Parking </li>
-				</ul>
-				
-				<ul class="property-amenities-list col-md-4">
-					<li class="enabled"> Cuisine equipée </li>
-					<li class="enabled"> Terrasse </li>
-					<li class="enabled"> Salle de bain neuve </li>
-				</ul>
-				
-				<ul class="property-amenities-list col-md-4">
-					<li class="enabled"> Ascenseur</li>
-					<li class="enabled"> Alarme </li>
-					<li class="enabled"> Barbecue extérieur </li>
-				</ul> -->
-				<!-- END PROPERTY AMENITIES LIST -->
-				
-				
 				<h1 class="section-title">Caractéristiques du bien</h1>
 				<!-- BEGIN PROPERTY FEATURES LIST -->
 				<ul class="property-features col-sm-6">
@@ -113,9 +89,9 @@
 						<% else %>
 							<li><i class="icon-apartment"></i> Etage № <%= @house.floor %></li>
 							<li><i class="icon-apartment-euro"></i> Taxe foncière : <%= @house.tax %> €</li>
-							<li><i class="icon-apartment-euro"></i> Charges annuelles : <%= @house.tax %> €</li>
-							<li><i class="icon-apartment-percent"></i> Frais d'agence : <%= @house.tax %> %</li>
-							<li><i class="icon-factory"></i> Nombre de lots : <%= @house.tax %> </li>
+							<li><i class="icon-apartment-euro"></i> Charges annuelles : <%= get_price(@house.charge) %> €</li>
+							<li><i class="icon-apartment-percent"></i> Frais d'agence : <%= get_price(@house.fee) %> %</li>
+							<li><i class="icon-factory"></i> Nombre de lots : <%= get_price(@house.lot) %> </li>
 							<li class="font-size-13"><i class="fa fa-recycle"></i>Diagnostic Performances Énergétiques : <b class="font-red-20" ><%= get_energy_letter(@house.energy) %></b> </li>
 					<% end %>
 				</ul>
@@ -132,23 +108,18 @@
 				</ul>
 				<!-- END PROPERTY FEATURES LIST -->
 				
-				
-<!-- 				<h1 class="section-title">Partagez cette propriete</h1>
+				<h1 class="section-title">Partager cette propriété</h1>
 				
 				<div class="share-wraper col-sm-12">
 					<h5>Envoyer a un ami:</h5>
 					<ul class="social-networks">
-						<li><a target="_blank" href="http://www.facebook.com/sharer.php?s=100&amp;p%5Burl%5D=http%3A%2F%2Fwww.wiselythemes.com%2Fhtml%2Fcozy%2Fproperties-detail.html%3Ffb%3Dtrue&amp;p%5Bimages%5D%5B0%5D=http%3A%2F%2Fwww.wiselythemes.com%2Fhtml%2Fcozy%2Fimages%2Fdetail-img1.jpg&amp;p%5Btitle%5D=Cozy%20Property"><i class="fa fa-facebook"></i></a></li>
-						<li><a target="_blank" href="https://twitter.com/intent/tweet?url=http://www.wiselythemes.com/html/cozy/properties-detail.html&amp;text=Cozy%20Property"><i class="fa fa-twitter"></i></a></li>
-						<li><a target="_blank" href="http://pinterest.com/pin/create/button/?url=http://www.wiselythemes.com/html/cozy/properties-detail.html&amp;description=Cozy%20Property&amp;media=http%3A%2F%2Fwww.wiselythemes.com%2Fhtml%2Fcozy%2Fimages%2Fdetail-img1.jpg"><i class="fa fa-pinterest"></i></a></li>
-						<li><a target="_blank" href="https://plus.google.com/share?url=http://www.wiselythemes.com/html/cozy/properties-detail.html"><i class="fa fa-google"></i></a></li>
-						<li><a href="mailto:?subject=Check%20out%20this%20property%20I%20found!&amp;body=http://www.wiselythemes.com/html/cozy/properties-detail.html"><i class="fa fa-envelope"></i></a></li>
+						<li>
+							<%= mail_to "", subject: "#{@house.type.name} | Agence de la Villedieu", body: "Voici le lien du bien : http://www.agencedelavilledieu.fr/houses/#{@house.id}" do %>
+								<i class="fa fa-envelope"></i>
+							<% end %>
+						</li>
 					</ul>
-					
-					<a class="print-button" href="javascript:window.print();">
-						<i class="fa fa-print"></i>
-					</a>
-				</div> -->
+				</div>
 			</div>	
 			<!-- END MAIN CONTENT -->
 		</div>
