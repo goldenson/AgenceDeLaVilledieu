@@ -5,26 +5,26 @@ ActiveAdmin.register House do
   show do |ad|
     
     attributes_table do
-      row :nom, :name
-      row :categorie, :type
-      row :addresse, :address
-      row :superficie, :area
-      row :superficie_salon, :mainarea
-      row :nombre_de_piece, :piece
-      row :nombre_de_chambre, :room
-      row :nombre_de_salle_de_bain, :bathroom
-      row :nombre_de_toilette, :toilette
-      row :prix, :price
-      row :energie, :energy
-      row :emision_ges, :impact
-      row :taxe_fonciere, :tax
-      row :frais_agence, :fee
-      row :charges_annuelles, :charge
-      row :nombre_de_lots, :lot
-      row :type_de_chauffage, :heating
-      row :annee_de_construction, :construction
-      row :superficie_jardin, :outdoorarea
-      row :etage, :floor
+      row :name
+      row :type
+      row :address
+      row :area
+      row :mainarea
+      row :piece
+      row :room
+      row :bathroom
+      row :toilette
+      row :price
+      row :energy
+      row :impact
+      row :tax
+      row :fee
+      row :charge
+      row :lot
+      row :heating
+      row :construction
+      row :outdoorarea
+      row :floor
       row :description
     end
 
