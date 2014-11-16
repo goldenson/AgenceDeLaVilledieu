@@ -55,6 +55,8 @@ ActiveAdmin.register House do
 
   form :html => { :multipart => true } do |f|
 
+   f.semantic_errors *f.object.errors.keys
+
    f.inputs "Informations Principales" do
       f.input :type, :label => "Categorie", :hint => "Selectionner une categorie"
       f.input :price, :label => "Prix"
