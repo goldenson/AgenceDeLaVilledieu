@@ -36,8 +36,11 @@
 									<%= image_tag(house.pictures.first.image.url(:large), size: "360x317") %>
 								</div>
 								<div class="price">
-									<i class="fa fa-home"></i>A vendre
-									<span><%= get_price(house.price) + " € FAI"%></span>
+									<% if house.type.name == "Maison" %>
+										<i class="icon-house"></i> A vendre <span><%= get_price(house.price) + " € FAI"%></span>
+									<% else %>
+										<i class="icon-apartment"></i> A vendre <span><%= get_price(house.price) + " € FAI"%></span>
+									<% end %>
 								</div>
 								<div class="info">
 									<h3>
