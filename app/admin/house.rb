@@ -1,11 +1,12 @@
 ActiveAdmin.register House do
 
-  permit_params :type, :name, :address, :area, :mainarea, :piece, :room, :bathroom, :toilette, :price, :energy, :impact, :tax, :fee, :charge, :lot, :heating, :construction, :outdoorarea, :floor, :description, :type_id, pictures_attributes: [:id, :image, :_destroy]
+  permit_params :type, :name, :address, :area, :mainarea, :piece, :room, :bathroom, :toilette, :price, :energy, :impact, :tax, :fee, :charge, :lot, :heating, :construction, :outdoorarea, :floor, :description, :type_id, :proprio, pictures_attributes: [:id, :image, :_destroy]
 
   show do |ad|
     
     attributes_table do
       row :name
+      row :proprio
       row :type
       row :address
       row :area
@@ -43,6 +44,7 @@ ActiveAdmin.register House do
     selectable_column
     
     column :nom, :name
+    column :nom_du_proprio, :proprio
     column :addresse, :address
     column :categorie, :type
     column :nombre_de_piece, :piece
@@ -61,6 +63,7 @@ ActiveAdmin.register House do
       f.input :type, :label => "Categorie", :hint => "Selectionner une categorie"
       f.input :price, :label => "Prix"
       f.input :name, :label => "Nom"
+      f.input :proprio, :label => "Nom du proprio"
       f.input :address, :label => "Adresse"
       f.input :description
       f.input :area, :label => "Superficie"

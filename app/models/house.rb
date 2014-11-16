@@ -26,6 +26,7 @@
 #  description  :text
 #  created_at   :datetime
 #  updated_at   :datetime
+#  proprio      :string(255)
 #
 # Indexes
 #

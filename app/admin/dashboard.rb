@@ -12,6 +12,9 @@ ActiveAdmin.register_page "Dashboard" do
         column "Biens" do |a|
           link_to a.name, admin_house_path(a.id)
         end
+        column "Proprio" do |a|
+          a.proprio
+        end
         column "Nombre de pieces" do |a|
           a.piece
         end
