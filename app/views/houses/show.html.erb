@@ -84,8 +84,7 @@
 							<li><i class="icon-house-euro"></i> Taxe foncière : <%= @house.tax %> €</li>
 							<li><i class="icon-area"></i> Salon de <%= @house.mainarea %> m2</li>
 							<li><i class="icon-garage"></i> Garage</li>
-							<li class="font-size-13"><i class="fa fa-recycle"></i>Diagnostic Performances Énergétiques : <b class="font-red-20" ><%= get_energy_letter(@house.energy) %></b> </li>
-							<!-- <li><i class="icon-house-percent"></i> Frais d'agence : <%= @house.tax %> %</li> -->
+							<li class="font-size-13"><i class="fa fa-recycle"></i>Diagnostic Performance Énergétique: <%= @house.energy %><hr/><b class="font-size-14">Catégorie :</b> <b class="font-red-20" ><%= get_energy_letter(@house.energy) %></b> </li>
 						<% else %>
 							<li><i class="icon-apartment"></i> Etage № <%= @house.floor %></li>
 							<li><i class="icon-apartment-euro"></i> Taxe foncière : <%= @house.tax %> €</li>
