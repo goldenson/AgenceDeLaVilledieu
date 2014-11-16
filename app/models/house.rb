@@ -38,4 +38,5 @@ class House < ActiveRecord::Base
   accepts_nested_attributes_for :pictures, :allow_destroy => true
   validates :pictures, presence: true
   validates :type, presence: true
+  validates :description, length: { minimum: 120 }
 end
