@@ -27,13 +27,18 @@
 #  created_at   :datetime
 #  updated_at   :datetime
 #  proprio      :string(255)
+#  slug         :string(255)
 #
 # Indexes
 #
+#  index_houses_on_slug     (slug) UNIQUE
 #  index_houses_on_type_id  (type_id)
 #
 
 class House < ActiveRecord::Base
+	extend FriendlyId
+  friendly_id :name, use: :slugged
+
   belongs_to :type
   has_many :pictures, :dependent => :destroy
   accepts_nested_attributes_for :pictures, :allow_destroy => true

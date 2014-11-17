@@ -1,6 +1,10 @@
 ActiveAdmin.register House do
 
-  permit_params :type, :name, :address, :area, :mainarea, :piece, :room, :bathroom, :toilette, :price, :energy, :impact, :tax, :fee, :charge, :lot, :heating, :construction, :outdoorarea, :floor, :description, :type_id, :proprio, pictures_attributes: [:id, :image, :_destroy]
+  before_filter :only => [:show] do
+    @house = House.friendly.find(params[:id])
+  end
+
+  permit_params :type, :name, :address, :area, :mainarea, :piece, :room, :bathroom, :toilette, :price, :energy, :impact, :tax, :fee, :charge, :lot, :heating, :construction, :outdoorarea, :floor, :description, :type_id, :proprio, :slug, pictures_attributes: [:id, :image, :_destroy]
 
   show do |ad|
     
@@ -97,4 +101,9 @@ ActiveAdmin.register House do
    f.actions
  end
  config.filters = false
+
+ # controller do
+ #   @house = House.friendly.find(params[:id])
+ # end
+
 end

@@ -1,9 +1,17 @@
 class HousesController < InheritedResources::Base
+
 	def index
-		@houses = House.order("created_at desc")
+		@house = House.order("created_at desc")
 	end
 
 	def show
-		@house = House.find(params[:id])
+		@house = House.friendly.find(params[:id])
 	end
+
+
+	private
+
+	 def set_house
+	 	@house = House.friendly.find(params[:id])
+	 end 
 end

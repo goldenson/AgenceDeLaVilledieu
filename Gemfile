@@ -57,6 +57,9 @@ gem 'paperclip', github: 'thoughtbot/paperclip'
 ### Handle S3 ###
 gem 'aws-sdk'
 
+### Handle pretty uri ###
+gem 'friendly_id'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
