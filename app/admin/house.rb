@@ -1,6 +1,6 @@
 ActiveAdmin.register House do
 
-  before_filter :only => [:show] do
+  before_filter :only => [:show, :edit] do
     @house = House.friendly.find(params[:id])
   end
 
