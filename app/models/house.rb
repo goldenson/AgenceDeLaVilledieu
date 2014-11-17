@@ -6,7 +6,7 @@
 #  type_id      :integer
 #  name         :string(255)
 #  address      :string(255)
-#  area         :integer
+#  area         :decimal(, )
 #  mainarea     :integer
 #  piece        :integer
 #  room         :integer
@@ -16,7 +16,7 @@
 #  energy       :integer
 #  impact       :integer
 #  tax          :integer
-#  fee          :integer
+#  fee          :decimal(, )
 #  charge       :integer
 #  lot          :integer
 #  heating      :string(255)

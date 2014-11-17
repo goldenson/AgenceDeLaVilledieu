@@ -45,8 +45,11 @@ module ApplicationHelper
 	end
 
 	def get_price(price)
-		n = price.to_s.reverse
-		return n.gsub(/(.{3})/, '\1 ').reverse
+		return price.to_s.reverse.gsub(/(.{3})/, '\1 ').reverse
+	end
+
+	def get_decimal_number(number)
+		return number.to_s.gsub(".",",")
 	end
 
 end
