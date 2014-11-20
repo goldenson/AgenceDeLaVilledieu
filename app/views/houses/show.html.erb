@@ -22,6 +22,10 @@
 	<div class="container">
 		<div class="row">
 		
+
+			<% if @house.type.name == "Terrain" %>
+				<%= render partial: 'houses/field' %>
+			<% else %>
 			<!-- BEGIN MAIN CONTENT -->
 			<div class="main col-sm-8 col-sm-offset-2">
 			
@@ -46,8 +50,16 @@
 				<div id="property-detail-wrapper" class="style1">
 					
 					<div class="price">
-						<i class="fa fa-home"></i>A Vendre
-						<span><%= get_price(@house.price) + " € FAI"%></span>
+						<% if @house.type.name == "Maison" %>
+							<i class="icon-house"></i>A Vendre
+							<span><%= get_price(@house.price) + " € FAI"%></span>
+						<% elsif @house.type.name == "Appartement" %>
+							<i class="icon-apartment"></i>A Vendre
+							<span><%= get_price(@house.price) + " € FAI"%></span>
+						<% elsif @house.type.name == "Location" %>
+							<i class="icon-apartment"></i>A Louer
+							<span><%= get_price(@house.price) + " € FAI"%></span>
+						<% end %>
 					</div>
 							
 					<!-- BEGIN PROPERTY DETAIL LARGE IMAGE SLIDER -->
@@ -124,6 +136,7 @@
 				</div>
 			</div>	
 			<!-- END MAIN CONTENT -->
+			<% end %>
 		</div>
 	</div>
 </div>
