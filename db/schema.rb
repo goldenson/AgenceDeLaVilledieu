@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120083707) do
+ActiveRecord::Schema.define(version: 20141120103011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,10 +89,18 @@ ActiveRecord::Schema.define(version: 20141120083707) do
     t.string   "proprio"
     t.string   "slug"
     t.string   "water"
+    t.integer  "parking_type_id"
   end
 
+  add_index "houses", ["parking_type_id"], name: "index_houses_on_parking_type_id", using: :btree
   add_index "houses", ["slug"], name: "index_houses_on_slug", unique: true, using: :btree
   add_index "houses", ["type_id"], name: "index_houses_on_type_id", using: :btree
+
+  create_table "parking_types", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pictures", force: true do |t|
     t.integer  "house_id"

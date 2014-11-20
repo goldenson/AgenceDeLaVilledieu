@@ -99,7 +99,7 @@
 				
 				<ul class="property-features col-sm-6">
 					<% if @house.type.name == "Appartement" or @house.type.name == "Location" %>
-							<li><i class="icon-garage"></i> Parking</li>
+							<li><i class="icon-garage"></i> Parking <%= @house.parking_type.name%></li>
 					<% end %>
 					<li><i class="icon-bedrooms"></i> <%= @house.room %> Chambres</li>
 					<li><i class="fa fa-tint"></i> <%= @house.water %> Salle d'eau</li>

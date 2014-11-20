@@ -4,7 +4,7 @@ ActiveAdmin.register House do
     @house = House.friendly.find(params[:id])
   end
 
-  permit_params :type, :name, :address, :area, :mainarea, :piece, :room, :bathroom, :water, :toilette, :price, :energy, :impact, :tax, :fee, :charge, :lot, :heating, :construction, :outdoorarea, :floor, :description, :type_id, :proprio, :slug, pictures_attributes: [:id, :image, :_destroy]
+  permit_params :name, :address, :area, :mainarea, :piece, :room, :bathroom, :water, :toilette, :price, :energy, :impact, :tax, :fee, :charge, :lot, :heating, :construction, :outdoorarea, :floor, :description, :type_id, :proprio, :slug, :parking_type_id, pictures_attributes: [:id, :image, :_destroy]
 
   show do |ad|
     
@@ -31,6 +31,7 @@ ActiveAdmin.register House do
       row :construction
       row :outdoorarea
       row :floor
+      row :parking_type
       row :description
     end
 
@@ -91,6 +92,8 @@ ActiveAdmin.register House do
       f.input :heating, :label => "Type de chauffage"
       f.input :construction, :label => "Annee de construction"
       f.input :floor, :label => "Etage"
+      f.input :parking_type, :label => "Parking", :hint => "Selectionner une categorie"
+      # as: :check_boxes
    end
 
    f.inputs "Photos" do
@@ -102,6 +105,7 @@ ActiveAdmin.register House do
 
    f.actions
  end
+ 
  config.filters = false
 
 end
