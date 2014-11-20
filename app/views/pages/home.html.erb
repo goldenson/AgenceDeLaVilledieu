@@ -61,10 +61,12 @@
 								<span><%= get_price(house.price) + " € FAI" %></span>
 							</div>
 							<ul class="amenities">
-								<li><i class="icon-area"></i> <%= get_decimal_number(house.area) %> m2</li>
 								<% if house.type.name != 'Terrain' %>
+									<li><i class="icon-area"></i> <%= get_decimal_number(house.area) %> m2</li>
 									<li><i class="icon-bedrooms"></i> <%= house.room %></li>
 									<li><i class="icon-bathrooms"></i> <%= house.bathroom %></li>
+								<% else %>
+									<li><i class="icon-area"></i> <%= get_decimal_number(house.outdoorarea) %> m2</li>
 								<% end %>
 							</ul>
 						</div>

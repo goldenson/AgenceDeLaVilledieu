@@ -6,7 +6,7 @@
 				<div class="property-topinfo">
 					<ul class="amenities">
 						<li><i class="icon-garden"></i> <%= @house.type.name %></li>
-						<li><i class="icon-area"></i> <%= get_decimal_number(@house.area) %> m2</li>
+						<li><i class="icon-area"></i> <%= get_decimal_number(@house.outdoorarea) %> m2</li>
 						<!-- <li><i class="fa fa-tree"></i> </li> -->
 					</ul>
 					
@@ -55,7 +55,7 @@
 				</ul>
 
 				<ul class="property-features col-sm-6">
-							<li><i class="icon-garden"></i> Terrain : <%= get_decimal_number(@house.area) %> m2</li>
+							<li><i class="icon-garden"></i> Terrain : <%= get_decimal_number(@house.outdoorarea) %> m2</li>
 				</ul>
 
 				<!-- END PROPERTY FEATURES LIST -->
