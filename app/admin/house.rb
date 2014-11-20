@@ -1,4 +1,5 @@
 ActiveAdmin.register House do
+  actions :all, except: :show
 
   before_filter :only => [:show, :edit, :update, :destroy] do
     @house = House.friendly.find(params[:id])
