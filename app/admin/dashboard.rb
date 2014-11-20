@@ -2,6 +2,10 @@ ActiveAdmin.register_page "Dashboard" do
 
   menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
 
+  action_item do
+    link_to "Ajouter un Bien", new_admin_house_path, class: 'btn btn-default'      
+  end
+  
   content title: proc{ I18n.t("active_admin.dashboard") } do
 
     panel "Liste des derniers biens" do
