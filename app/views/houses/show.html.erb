@@ -80,9 +80,10 @@
 				<!-- BEGIN PROPERTY FEATURES LIST -->
 				<ul class="property-features col-sm-6">
 					<% if @house.type.name == "Maison" %>
-							<li><i class="icon-garden"></i> <%= @house.outdoorarea %> m2 de jardin</li>
+							<li><i class="icon-garden"></i> Terrain : <%= @house.outdoorarea %> m2</li>
 							<li><i class="icon-house-euro"></i> Taxe foncière : <%= @house.tax %> €</li>
 							<li><i class="icon-area"></i> Salon de <%= @house.mainarea %> m2</li>
+							<li><i class="icon-rooms"></i> <%= @house.piece %> Pièces</li>
 							<li><i class="icon-garage"></i> Garage</li>
 							<li class="font-size-13"><i class="fa fa-recycle"></i>Diagnostic Performance Énergétique: <%= @house.energy %><hr/><b class="font-size-14">Catégorie :</b> <b class="font-red-20" ><%= get_energy_letter(@house.energy) %></b> </li>
 						<% else %>
@@ -91,20 +92,21 @@
 							<li><i class="icon-apartment-euro"></i> Charges annuelles : <%= get_price(@house.charge) %> €</li>
 							<li><i class="icon-apartment-percent"></i> Frais d'agence : <%= get_decimal_number(@house.fee) %> %</li>
 							<li><i class="icon-factory"></i> Nombre de lots : <%= get_price(@house.lot) %> </li>
+							<li><i class="fa fa-building"></i> Année de construction : <%= @house.construction %></li>
 							<li class="font-size-13"><i class="fa fa-recycle"></i>Diagnostic Performance Énergétique: <%= @house.energy %><hr/><b class="font-size-14">Catégorie :</b> <b class="font-red-20" ><%= get_energy_letter(@house.energy) %></b> </li>
 					<% end %>
 				</ul>
 				
 				<ul class="property-features col-sm-6">
-					<% if @house.type.name == "Appartement" %>
+					<% if @house.type.name == "Appartement" or @house.type.name == "Location" %>
 							<li><i class="icon-garage"></i> Parking</li>
 					<% end %>
-					<!-- Rajouter cet icone pour salle deau fa fa-tint -->
-					<li><i class="icon-rooms"></i> <%= @house.piece %> Pièces</li>
 					<li><i class="icon-bedrooms"></i> <%= @house.room %> Chambres</li>
+					<li><i class="fa fa-tint"></i> <%= @house.water %> Salle d'eau</li>
 					<li><i class="icon-bathrooms"></i> <%= @house.bathroom %> Salle de bains</li>
+					<li><i class="fa fa-female"></i><%= @house.bathroom %> Toilettes</li>
 					<li><i class="fa fa-fire"></i> Chauffage : <%= @house.heating %></li>
-					<li><i class="fa fa-flash"></i>Gaz à effet de serre : <%= @house.impact %><hr/><b>Catégorie :</b> <b class="font-red-20"><%= get_energy_letter(@house.impact) %></b> </li>
+					<li><i class="fa fa-flash"></i>Gaz à effet de serre : <%= @house.impact %><hr/><b>Catégorie :</b> <b class="font-red-20"><%= get_impact_letter(@house.impact) %></b> </li>
 				</ul>
 				<!-- END PROPERTY FEATURES LIST -->
 				

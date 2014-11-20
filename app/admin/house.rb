@@ -1,10 +1,10 @@
 ActiveAdmin.register House do
 
-  before_filter :only => [:show, :edit, :update] do
+  before_filter :only => [:show, :edit, :update, :destroy] do
     @house = House.friendly.find(params[:id])
   end
 
-  permit_params :type, :name, :address, :area, :mainarea, :piece, :room, :bathroom, :toilette, :price, :energy, :impact, :tax, :fee, :charge, :lot, :heating, :construction, :outdoorarea, :floor, :description, :type_id, :proprio, :slug, pictures_attributes: [:id, :image, :_destroy]
+  permit_params :type, :name, :address, :area, :mainarea, :piece, :room, :bathroom, :water, :toilette, :price, :energy, :impact, :tax, :fee, :charge, :lot, :heating, :construction, :outdoorarea, :floor, :description, :type_id, :proprio, :slug, pictures_attributes: [:id, :image, :_destroy]
 
   show do |ad|
     
@@ -18,6 +18,7 @@ ActiveAdmin.register House do
       row :piece
       row :room
       row :bathroom
+      row :water
       row :toilette
       row :price
       row :energy
@@ -73,10 +74,11 @@ ActiveAdmin.register House do
       f.input :area, :label => "Superficie"
       f.input :piece, :label => "Nombre de piece"
       f.input :room, :label => "Nombre de chambre"
+      f.input :water, :label => "Nombre de salle d'eau"
       f.input :bathroom, :label => "Nombre de salle de bain"
       f.input :toilette, :label => "Nombre de toilette"
       f.input :mainarea, :label => "Superficie salon"
-      f.input :outdoorarea, :label => "Superficie jardin"
+      f.input :outdoorarea, :label => "Terrain"
    end
 
    f.inputs "Details" do
@@ -101,9 +103,5 @@ ActiveAdmin.register House do
    f.actions
  end
  config.filters = false
-
- # controller do
- #   @house = House.friendly.find(params[:id])
- # end
 
 end

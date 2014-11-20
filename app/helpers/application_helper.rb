@@ -25,9 +25,9 @@ module ApplicationHelper
 	def get_impact_letter(impact_number)
 		n = impact_number
 		case n
-		when 0..4
+		when 0..5
 		  return "A"
-		when 5..10
+		when 6..10
 		  return "B"
 		when 11..20
 		  return "C"

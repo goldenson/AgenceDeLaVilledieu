@@ -38,8 +38,10 @@
 								<div class="price">
 									<% if house.type.name == "Maison" %>
 										<i class="icon-house"></i> A vendre <span><%= get_price(house.price) + " € FAI"%></span>
-									<% else %>
+									<% elsif house.type.name == "Appartement" %>
 										<i class="icon-apartment"></i> A vendre <span><%= get_price(house.price) + " € FAI"%></span>
+									<% elsif house.type.name == "Location" %>
+										<i class="icon-apartment"></i> A louer <span><%= get_price(house.price) + " € FAI"%></span>
 									<% end %>
 								</div>
 								<div class="info">

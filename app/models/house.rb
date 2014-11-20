@@ -28,6 +28,7 @@
 #  updated_at   :datetime
 #  proprio      :string(255)
 #  slug         :string(255)
+#  water        :string(255)
 #
 # Indexes
 #
@@ -45,4 +46,9 @@ class House < ActiveRecord::Base
   validates :pictures, presence: true
   validates :type, presence: true
   validates :description, length: { minimum: 120 }
+
+  def should_generate_new_friendly_id?
+  	name_changed? || super
+  end
+
 end
