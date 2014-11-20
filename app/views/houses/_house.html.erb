@@ -1,0 +1,85 @@
+<!-- BEGIN MAIN CONTENT -->
+			<div class="main col-sm-8 col-sm-offset-2">
+			
+				<h1 class="property-title"><%= @house.name %> <small><%= @house.address %></small></h1>
+				
+				<div class="property-topinfo">
+					<ul class="amenities">
+						<li><i class="icon-house"></i> <%= @house.type.name %></li>
+						<li><i class="icon-area"></i> <%= get_decimal_number(@house.area) %> m2</li>
+						<li><i class="icon-bedrooms"></i> <%= @house.room %></li>
+						<li><i class="icon-bathrooms"></i> <%= @house.bathroom %></li>
+					</ul>
+					
+					<div id="property-id">Posté le : <%= @house.created_at.strftime("%d-%m-%Y") %></div>
+				</div>
+
+				<!-- BEGIN PROPERTY DETAIL SLIDERS WRAPPER -->
+				<div id="property-detail-wrapper" class="style1">
+					
+					<div class="price">
+						<i class="icon-house"></i>A Vendre
+						<span><%= get_price(@house.price) + " € FAI"%></span>
+					</div>
+							
+					<!-- BEGIN PROPERTY DETAIL LARGE IMAGE SLIDER -->
+					<div id="property-detail-large" class="owl-carousel">
+						<!-- BE CAREFUL DONT USE = IN EACH LOOP MOTHAFUCKA -->
+						<% @house.pictures.each do |picture| %>
+							<div class="item">
+								<%= image_tag(picture.image.url(:large), size: "764x423") %>
+							</div>
+						<% end %>
+					</div>
+					<!-- END PROPERTY DETAIL LARGE IMAGE SLIDER -->
+					
+					<!-- BEGIN PROPERTY DETAIL THUMBNAILS SLIDER -->
+					<div id="property-detail-thumbs" class="owl-carousel">
+						<% @house.pictures.each do |picture| %>
+							<div class="item">
+								<%= image_tag(picture.image.url(:medium), size: "148x131") %>
+							</div>
+						<% end %>
+					</div>
+					<!-- END PROPERTY DETAIL THUMBNAILS SLIDER -->
+				
+				</div>
+
+				<p><%= @house.description %></p>
+				<p>&nbsp;</p>
+				
+				<h1 class="section-title">Caractéristiques du bien</h1>
+				<!-- BEGIN PROPERTY FEATURES LIST -->
+				<ul class="property-features col-sm-6">
+						<li><i class="icon-garden"></i> Terrain : <%= @house.outdoorarea %> m2</li>
+						<li><i class="icon-house-euro"></i> Taxe foncière : <%= @house.tax %> €</li>
+						<li><i class="icon-area"></i> Salon de <%= @house.mainarea %> m2</li>
+						<li><i class="icon-rooms"></i> <%= @house.piece %> Pièces</li>
+						<li><i class="icon-garage"></i> Garage</li>
+						<li class="font-size-13"><i class="fa fa-recycle"></i>Diagnostic Performance Énergétique: <%= @house.energy %><hr/><b class="font-size-14">Catégorie :</b> <b class="font-red-20" ><%= get_energy_letter(@house.energy) %></b> </li>
+				</ul>
+				
+				<ul class="property-features col-sm-6">
+					<li><i class="icon-bedrooms"></i> <%= @house.room %> Chambres</li>
+					<li><i class="fa fa-tint"></i> <%= @house.water %> Salle d'eau</li>
+					<li><i class="icon-bathrooms"></i> <%= @house.bathroom %> Salle de bains</li>
+					<li><i class="fa fa-female"></i><%= @house.bathroom %> Toilettes</li>
+					<li><i class="fa fa-fire"></i> Chauffage : <%= @house.heating %></li>
+					<li><i class="fa fa-flash"></i>Gaz à effet de serre : <%= @house.impact %><hr/><b>Catégorie :</b> <b class="font-red-20"><%= get_impact_letter(@house.impact) %></b> </li>
+				</ul>
+				<!-- END PROPERTY FEATURES LIST -->
+				
+				<h1 class="section-title">Partager cette propriété</h1>
+				
+				<div class="share-wraper col-sm-4 col-sm-offset-4">
+					<h5>Envoyer a un ami:</h5>
+					<ul class="social-networks">
+						<li>
+							<%= mail_to "", subject: "#{@house.type.name} | Agence de la Villedieu", body: "Voici le lien du bien : http://www.agencedelavilledieu.fr/houses/#{@house.id}" do %>
+								<i class="fa fa-envelope"></i>
+							<% end %>
+						</li>
+					</ul>
+				</div>
+			</div>	
+			<!-- END MAIN CONTENT -->
