@@ -77,7 +77,7 @@
 					<h5>Envoyer a un ami:</h5>
 					<ul class="social-networks">
 						<li>
-							<%= mail_to "", subject: "#{@house.type.name} | Agence de la Villedieu", body: "Voici le lien du bien : http://www.agencedelavilledieu.fr/houses/#{@house.id}" do %>
+							<%= mail_to "", subject: "#{@house.type.name} | Agence de la Villedieu", body: "Voici le lien du bien : http://www.agencedelavilledieu.fr/houses/#{@house.slug}" do %>
 								<i class="fa fa-envelope"></i>
 							<% end %>
 						</li>

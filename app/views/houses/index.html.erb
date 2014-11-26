@@ -51,7 +51,7 @@
 										<a href="properties-detail.html"><%= house.name %></a>
 										<small><%= house.address %></small>
 									</h3>
-									<p size="150"><%= truncate(house.description, :length => 150) %></p>
+									<p size="150"><%= truncate(house.description, :length => 120) %></p>
 								
 									<ul class="amenities">
 										<% if house.type.name != 'Terrain' %>
