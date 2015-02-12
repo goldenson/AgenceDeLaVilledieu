@@ -12,3 +12,5 @@
 
   	Type.create!(name: 'Location')
   	Type.create!(name: 'Terrain')
+  	Type.create!(name: 'Maison')
+  	Type.create!(name: 'Appartement')
