@@ -11,7 +11,7 @@ class PagesController < InheritedResources::Base
 		email = params[:email]
 		message = params[:message]
 
-		if name != "" && email && "" && message != ""
+		if name != "" && email != "" && message != ""
 			ContactMAiler.contact_mail(name, email, message).deliver
 		end
 
