@@ -23,6 +23,10 @@
 @import "bootstrap";
 
 
+.circle {
+  border-radius: 170px;
+}
+
 .inner {
   width: 88%;
 }
@@ -4394,7 +4398,7 @@ a.tp-caption.btn-lg {
 ================================================== */
 .agency-detail,
 .agent-detail {
-  border: 1px solid #e4e4e4;
+  /*border: 1px solid #e4e4e4;*/
   display: block;
   margin: 60px 0 50px;
 }
@@ -4473,7 +4477,7 @@ a.tp-caption.btn-lg {
   padding: 0;
 }
 .agent-detail .image img {
-  width: 100%;
+  width: 75%;
 }
 .agent-detail .info {
   padding-top: 20px;

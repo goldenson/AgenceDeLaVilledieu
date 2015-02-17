@@ -86,4 +86,17 @@ Rails.application.configure do
     }
   }
 
+  # config.active_job.queue_adapter = :sucker_punch
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  address:              'smtp.mandrillapp.com',
+  port:                 587,
+  enable_starttls_auto: true,
+  user_name:            'orefice.maxime@gmail.com',
+  password:             ENV['MANDRILLPASSWORD'],
+  authentication:       'login'}
+
+  config.action_mailer.default charset: "utf-8"
+
 end

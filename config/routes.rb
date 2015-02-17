@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  post 'pages/contact', to: "pages#sendmail"
+
   get 'pages/home'
   get 'pages/contact'
   
