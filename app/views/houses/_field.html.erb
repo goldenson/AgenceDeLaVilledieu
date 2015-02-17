@@ -25,7 +25,7 @@
 					<div id="property-detail-large" class="owl-carousel">
 						<!-- BE CAREFUL DONT USE = IN EACH LOOP MOTHAFUCKA -->
 						<% @house.pictures.each do |picture| %>
-							<div class="item">
+							<div class="item inner">
 								<%= image_tag(picture.image.url(:large), size: "764x483") %>
 							</div>
 						<% end %>
