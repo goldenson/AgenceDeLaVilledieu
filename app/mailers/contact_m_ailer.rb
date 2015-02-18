@@ -8,7 +8,7 @@ class ContactMAiler < ActionMailer::Base
 		@message = message
 
 		mail(
-			to: 'agencedelavilledieu@orange.fr',
+			to: 'orefice.maxime@gmail.com',
 			subject: 'Contact Agence site internet'
 			)
 		
