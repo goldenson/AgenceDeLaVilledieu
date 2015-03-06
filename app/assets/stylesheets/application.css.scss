@@ -4419,6 +4419,7 @@ a.tp-caption.btn-lg {
 }
 .agency-detail .info header h2,
 .agent-detail .info header h2 {
+  text-align: center;
   text-transform: none;
   font-size: 24pt;
   color: #4d4f52;
@@ -4478,6 +4479,7 @@ a.tp-caption.btn-lg {
 }
 .agent-detail .image img {
   width: 75%;
+  margin-left: 40px;
 }
 .agent-detail .info {
   padding-top: 20px;
@@ -8226,4 +8228,9 @@ div.dark_square #pp_full_res .pp_inline {
 }
 .blog-main-image.style2 .tag:before {
   display: none;
+}
+
+.image-home {
+  height: 100%;
+  width: 100%;
 }

@@ -14,7 +14,7 @@ ActiveAdmin.register_page "Dashboard" do
           a.type.name
         end
         column "Biens" do |a|
-          link_to a.name, admin_house_path(a.id)
+          link_to a.name, edit_admin_house_path(a.slug)
         end
         column "Proprio" do |a|
           a.proprio
