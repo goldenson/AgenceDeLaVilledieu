@@ -5077,7 +5077,9 @@ a.tp-caption.btn-lg {
   margin: 0 1px;
 }
 #property-detail-large .item img {
-  width: 100%;
+  width: 110%;
+  max-width: 600px;
+  max-height: 400px;
 }
 #property-detail-large .item .price {
   position: absolute;
