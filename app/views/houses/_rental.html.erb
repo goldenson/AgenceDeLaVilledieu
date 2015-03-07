@@ -55,9 +55,9 @@
 					<li><i class="icon-apartment-euro"></i> Taxe foncière : <%= @house.tax %> €</li>
 					<li><i class="icon-apartment-euro"></i> Charges annuelles : <%= get_price(@house.charge) %> €</li>
 					<li><i class="icon-apartment-percent"></i> Frais d'agence : <%= get_decimal_number(@house.fee) %> %</li>
-					<li><i class="icon-factory"></i> Nombre de lots : <%= get_price(@house.lot) %> </li>
+					<li><i class="icon-factory"></i> Nombre de lots de la copropriété : <%= get_price(@house.lot) %> </li>
 					<li><i class="fa fa-building"></i> Année de construction : <%= @house.construction %></li>
-					<li class="font-size-13"><i class="fa fa-recycle"></i>Diagnostic Performance Énergétique: <%= @house.energy %><hr/><b class="font-size-14">Catégorie :</b> <b class="font-red-20" ><%= get_energy_letter(@house.energy) %></b> </li>
+					<li class="font-size-13"><i class="fa fa-recycle"></i> Consommation Énergie : <%= @house.energy %><hr/><b class="font-size-14">Catégorie :</b> <b class="font-red-20" ><%= get_energy_letter(@house.energy) %></b> </li>
 				</ul>
 				
 				<ul class="property-features col-sm-6">

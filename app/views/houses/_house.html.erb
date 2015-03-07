@@ -56,7 +56,7 @@
 						<li><i class="icon-area"></i> Salon de <%= @house.mainarea %> m2</li>
 						<li><i class="icon-rooms"></i> <%= @house.piece %> Pièces</li>
 						<li><i class="icon-garage"></i> Garage</li>
-						<li class="font-size-13"><i class="fa fa-recycle"></i>Diagnostic Performance Énergétique: <%= @house.energy %><hr/><b class="font-size-14">Catégorie :</b> <b class="font-red-20" ><%= get_energy_letter(@house.energy) %></b> </li>
+						<li class="font-size-13"><i class="fa fa-recycle"></i>Consommation Énergie : <%= @house.energy %><hr/><b class="font-size-14">Catégorie :</b> <b class="font-red-20" ><%= get_energy_letter(@house.energy) %></b> </li>
 				</ul>
 				
 				<ul class="property-features col-sm-6">
