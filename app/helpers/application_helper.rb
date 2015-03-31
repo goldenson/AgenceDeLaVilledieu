@@ -52,4 +52,12 @@ module ApplicationHelper
 		return number.to_s.gsub(".",",")
 	end
 
+	def display_water_room(house)
+		if house.bathroom.blank? || house.bathroom == 0
+			house.water
+		else
+			house.bathroom
+		end
+	end
+
 end
