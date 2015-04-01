@@ -53,11 +53,7 @@ module ApplicationHelper
 	end
 
 	def display_water_room(house)
-		if house.bathroom.blank? || house.bathroom == 0
-			house.water
-		else
-			house.bathroom
-		end
+		house.water.to_i + house.bathroom.to_i
 	end
 
 end
