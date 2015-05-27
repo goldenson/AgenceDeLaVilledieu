@@ -1,5 +1,5 @@
 class ContactMAiler < ActionMailer::Base
-	default from: 'contact@agencedelavilledieu.fr'
+	default from: 'orefice.maxime@gmail.com'
 
 	def contact_mail(name, email, message)
 
