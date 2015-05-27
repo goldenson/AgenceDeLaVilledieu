@@ -1,5 +1,5 @@
 class ContactMAiler < ActionMailer::Base
-	default from: 'orefice.maxime@gmail.com'
+	default from: 'contact@agencedelavilledieu.fr'
 
 	def contact_mail(name, email, message)
 
@@ -9,7 +9,7 @@ class ContactMAiler < ActionMailer::Base
 
 		mail(
 			to: 'agencedelavilledieu@orange.fr',
-			subject: 'Contact Agence site internet'
+			subject: 'Contact Agence de la villedieu'
 			)
 		
 	end
